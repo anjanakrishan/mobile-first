@@ -1,0 +1,464 @@
+{
+  "_meta": {
+    "source": "thetoastedwalnut.com + March 2026 PDF menus",
+    "extracted": "2026-08-08",
+    "notes": [
+      "breakfast_dine_in, lunch_dine_in, lunch_take_out: fully verified from official March 2026 PDFs. Descriptions are complete and accurate as printed.",
+      "bakery, catering: category/item/price/description/image_url fully verified via live browser extraction (Claude in Chrome) of all 69 individual WooCommerce product pages on 2026-08-08.",
+      "description: null means the live product page genuinely has no description written (confirmed, not a scraping gap) -- affects: Carrot Cake, Date Square, Lemon Square, Skor Brownie, Peanut Butter Chocolate Chip Cookie, Pecan Pie, Crustless Spinach & Cheddar Quiche, Plain Shortbread, Skor Shortbread, Jalapeno Mac 'N Cheese, Meat Lasagna, Shepherd's Pie, Vegetable Lasagna. Worth flagging to the client as a copywriting gap to fix in the rebuild.",
+      "image_url: real product photo where the site has one. Where the live site itself shows WooCommerce's generic gray placeholder, image_url points to that placeholder and needs_photo is true -- these items have never had a real photo uploaded.",
+      "pack_size CONFIRMED from product pages: Butter Tarts = 1/2 dozen (corrected -- not full dozen as category page implied), Cupcakes = 1/2 dozen, Gingersnaps = 1/2 dozen (6 pack), Cheese & Herb Scones = 6 (half dozen), Shortbread = 12 pack. Caprese Skewers, Mini Sausage Rolls, Quiche Tartlettes, Stuffed Mushroom Caps = 12 pieces each.",
+      "beverages: extracted from breakfast PDF page 2, kept as its own top-level category since it's not meal-specific."
+    ]
+  },
+  "categories": [
+    {
+      "id": "breakfast_dine_in",
+      "name": "Breakfast",
+      "subtitle": "Dine-in breakfast menu served daily 9 to 11:30 am",
+      "source": "Breakfast-Menu-Dine-In-March-2026.pdf",
+      "subcategories": null,
+      "items": [
+        {"name": "Traditional Breakfast", "price": 14.75, "description": "Two fried or scrambled eggs, four slices of bacon. Served with your choice of scone or toast and strawberry jam. Garnished with fresh fruit. Add one egg $1.00.", "image_url": "images/breakfast/traditional-breakfast.png"},
+        {"name": "Omelette", "price": 15.95, "description": "Three eggs, red bell pepper, spinach and feta cheese. Served with your choice of scone or toast and strawberry jam. Garnished with fresh fruit. Add grilled ham or a side of bacon $3.95.", "image_url": "images/breakfast/omelette.png"},
+        {"name": "Bacon, Egg and Cheese Bagel", "price": 11.95, "description": "Bacon, cheddar cheese and a fried egg on your choice of a plain or everything bagel. Garnished with fresh fruit.", "image_url": "images/breakfast/bacon-egg-cheese-bagel.png"},
+        {"name": "Breakfast Club Bagel", "price": 13.25, "description": "Bacon, smoked gouda cheese, fried egg, tomato, lettuce and mayonnaise on your choice of a plain or everything bagel. Garnished with fresh fruit.", "image_url": "images/breakfast/breakfast-club-bagel.png"},
+        {"name": "Western Sandwich", "price": 13.25, "description": "Two eggs, applewood smoked ham, onion, bell pepper, cheddar and mozzarella cheese on toasted multigrain bread. Garnished with fresh fruit.", "image_url": "images/breakfast/western-sandwich.png"},
+        {"name": "BLT", "price": 12.75, "description": "Bacon, lettuce, tomato and mayonnaise served on toasted marble rye bread. Garnished with fresh fruit.", "image_url": "images/breakfast/blt.png"},
+        {"name": "Crustless Quiche", "price": 13.75, "description": "Our homemade quiche of the day and your choice of scone (blueberry, cranberry or herb and cheddar) with jam. Garnished with fresh fruit.", "image_url": "images/breakfast/crustless-quiche.png"},
+        {"name": "Fruit Parfait", "price": 11.50, "description": "Vanilla Greek yogurt and The Toasted Walnut house made granola topped with fresh fruit and a drizzle of real maple syrup. Add a scone (blueberry, cranberry or herb and cheddar) with strawberry jam $3.95.", "image_url": "images/breakfast/fruit-parfait.png"},
+        {"name": "Avocado Toast", "price": 15.95, "description": "Toasted marble rye bread topped with smashed avocado, tomato, two over easy eggs, feta, balsamic glaze and sprouts. Garnished with fresh fruit. *Seasonal*", "image_url": "images/breakfast/avocado-toast.png"},
+        {"name": "Breakfast Wrap", "price": 13.95, "description": "Three eggs, bacon, spinach, red pepper, cheddar and mozzarella cheese served on a grilled whole wheat wrap with a side of sour cream. Garnished with fresh fruit. *New*", "image_url": "images/breakfast/breakfast-wrap.png"}
+      ]
+    },
+    {
+      "id": "beverages",
+      "name": "Beverages",
+      "subtitle": "All prices plus applicable taxes",
+      "source": "Breakfast-Menu-Dine-In-March-2026.pdf",
+      "subcategories": null,
+      "items": [
+        {"name": "Drip Coffee", "price": 3.50, "description": null, "image_url": "images/beverages/drip-coffee.png"},
+        {"name": "Espresso (single)", "price": 3.00, "description": null, "image_url": "images/beverages/espresso.png"},
+        {"name": "Espresso (double)", "price": 3.75, "description": null, "image_url": "images/beverages/espresso.png"},
+        {"name": "Americano", "price": 3.95, "description": null, "image_url": "images/beverages/americano.png"},
+        {"name": "Cappuccino", "price": 4.95, "description": null, "image_url": "images/beverages/cappuccino.png"},
+        {"name": "Flat White", "price": 5.95, "description": null, "image_url": "images/beverages/flat-white.png"},
+        {"name": "Latte", "price": 5.95, "description": null, "image_url": "images/beverages/latte.png"},
+        {"name": "Chai Tea Latte", "price": 5.95, "description": null, "image_url": "images/beverages/chai-tea-latte.png"},
+        {"name": "London Fog", "price": 5.95, "description": null, "image_url": "images/beverages/london-fog.png"},
+        {"name": "Tea", "price": 3.50, "description": "Orange Pekoe, Earl Grey, Jasmine Green, Spiced Chai, Raspberry.", "image_url": "images/beverages/tea.png"},
+        {"name": "Herbal Tea", "price": 3.95, "description": "Cranberry Apple, Cinnamon Apple, Chamomile, Lemon, Peppermint.", "image_url": "images/beverages/tea.png"},
+        {"name": "Mocha", "price": 5.95, "description": null, "image_url": "images/beverages/mocha.png"},
+        {"name": "Hot Chocolate", "price": 4.95, "description": null, "image_url": "images/beverages/hot-chocolate.png"},
+        {"name": "Iced Americano", "price": 3.95, "description": null, "image_url": "images/beverages/iced-americano.png"},
+        {"name": "Iced Vanilla Latte", "price": 5.95, "description": null, "image_url": "images/beverages/iced-vanilla-latte.png"},
+        {"name": "Iced Mocha", "price": 5.95, "description": null, "image_url": "images/beverages/iced-mocha.png"},
+        {"name": "Pop", "price": 3.95, "description": "Coke, Diet Coke, Ginger ale.", "image_url": "images/beverages/sparkling-water.png"},
+        {"name": "Juice", "price": 3.95, "description": "Apple, Orange.", "image_url": "images/beverages/juice.png"},
+        {"name": "Bottled Water", "price": 2.00, "description": null, "image_url": "images/beverages/bottled-water.png"},
+        {"name": "Sparkling Water", "price": 3.95, "description": null, "image_url": "images/beverages/sparkling-water.png"},
+        {"name": "Snapple Iced Tea", "price": 3.95, "description": "Peach, Lemon.", "image_url": "images/beverages/tea.png"},
+        {"name": "Chocolate Milk", "price": 4.50, "description": null, "image_url": "images/beverages/milk.png"},
+        {"name": "White Milk", "price": 4.50, "description": null, "image_url": "images/beverages/milk.png"},
+        {"name": "Flavoured Shots", "price": 0.85, "description": "Vanilla, Caramel, Hazelnut.", "image_url": "images/beverages/espresso.png"},
+        {"name": "Almond or Oat Milk", "price": 0.95, "description": null, "image_url": "images/beverages/almond-oat-milk.png"}
+      ]
+    },
+    {
+      "id": "lunch_dine_in",
+      "name": "Lunch (Dine-In)",
+      "subtitle": "March 2026",
+      "source": "Lunch-Menu-Dine-in-March-2026.pdf",
+      "subcategories": [
+        {
+          "id": "panini_sandwiches_dine_in",
+          "name": "Panini Sandwiches",
+          "price": 19.95,
+          "note": "Includes soup or garden salad. Upgrade to signature/beet & goat cheese/caesar salad (no chicken) $2.95. Served on grilled naan bread; Ste. Anne's Five Seed gluten-free available.",
+          "items": [
+            {"name": "Club House Stack", "description": "Grilled chicken breast, bacon, tomato and cheddar cheese with a side of chipotle sauce.", "image_url": null},
+            {"name": "Roasted Red Pepper", "description": "A thin layer of dill cream cheese, roasted red peppers, zucchini, red onion, feta cheese and a drizzle of balsamic glaze.", "image_url": null},
+            {"name": "Cranberry and Chicken", "description": "Grilled chicken breast, smoked gouda cheese, apple slices and our homemade cranberry walnut chutney.", "image_url": null},
+            {"name": "Gourmet Grilled Cheese", "description": "Bacon, mozzarella cheese, brie cheese and apple slices on grilled naan bread.", "image_url": null},
+            {"name": "Fig and Apple", "description": "Ham, house made fig and apple chutney, brie cheese and apple slices on grilled marble rye bread.", "image_url": null}
+          ]
+        },
+        {
+          "id": "traditional_sandwiches_dine_in",
+          "name": "Traditional Sandwiches",
+          "price": 18.50,
+          "note": "Includes soup or garden salad. Upgrade $2.95. Ste. Anne's Five Seed gluten-free available.",
+          "items": [
+            {"name": "Chicken Salad", "description": "Diced chicken with mayonnaise, apple slices, cheddar cheese and lettuce served on multigrain bread.", "image_url": null},
+            {"name": "Cucumber and Cream Cheese", "description": "Lettuce, cucumber, dill cream cheese and sprouts served on marble rye bread.", "image_url": null},
+            {"name": "Egg Salad", "description": "Chopped egg salad, cucumber and mayonnaise served on multigrain bread.", "image_url": null},
+            {"name": "Ham and Cheese", "description": "Black forest ham, cheddar cheese, lettuce, cucumber and hot honey mustard served on multigrain bread.", "image_url": null},
+            {"name": "Loaded Tuna", "description": "Flaked tuna with lettuce, cucumber, tomato, cheddar cheese, sprouts, mayonnaise and hot honey mustard served on multigrain bread.", "image_url": null},
+            {"name": "BLT", "description": "Bacon, lettuce, tomato and mayonnaise served on toasted marble rye bread. Add cheddar cheese $2.50.", "image_url": null}
+          ]
+        },
+        {
+          "id": "wraps_dine_in",
+          "name": "Wraps",
+          "price": 19.50,
+          "note": "Includes soup or garden salad. Upgrade $2.95. Served on whole wheat wraps.",
+          "items": [
+            {"name": "Chicken Caesar", "description": "Grilled chicken breast, real bacon bits, romaine, parmesan cheese and our homemade creamy Caesar dressing.", "image_url": null},
+            {"name": "Chipotle Chicken", "description": "Grilled chicken breast, bacon, mozzarella and cheddar cheese, romaine lettuce and chipotle dressing.", "image_url": null},
+            {"name": "Cranberry Chicken Salad", "description": "Chicken salad, spring mix, apple slices and our homemade cranberry chutney.", "image_url": null},
+            {"name": "Maple Chicken", "description": "Grilled chicken breast, bacon, goat cheese, spinach and caramelized onions in maple syrup and mayonnaise.", "image_url": null},
+            {"name": "Veggie Lovers Wrap (vegetarian)", "description": "Spinach, tomato, red peppers, cucumbers, feta cheese, hummus, red pepper jelly and sprouts.", "image_url": null}
+          ]
+        },
+        {
+          "id": "soups_dine_in",
+          "name": "Soups",
+          "price": 10.50,
+          "note": "Includes a homemade scone from our bakery.",
+          "items": [
+            {"name": "Mango Curry Butternut Squash", "description": "Our top requested soup.", "image_url": null},
+            {"name": "Soup of the Day", "description": "Homemade daily with the freshest ingredients, ask your server for details.", "image_url": null}
+          ]
+        },
+        {
+          "id": "combos_dine_in",
+          "name": "Combos",
+          "price": null,
+          "note": null,
+          "items": [
+            {"name": "Soup and 1/2 Sandwich", "price": 14.75, "description": "Cup of Mango Curry Butternut Squash soup and 1/2 sandwich (chicken salad, egg salad, ham and cheese, or tuna).", "image_url": null},
+            {"name": "Soup, Salad, Scone", "price": 18.95, "description": "Bowl of Mango Curry Butternut Squash soup, The Toasted Walnut signature salad and a scone of your choice.", "image_url": null},
+            {"name": "Crustless Quiche, Salad and Scone", "price": 18.95, "description": "Our homemade quiche of the day, signature salad and choice of scone.", "image_url": null},
+            {"name": "Crustless Quiche, Soup and Scone", "price": 18.95, "description": "Our homemade quiche of the day, bowl of Mango Curry Butternut Squash soup and choice of scone.", "image_url": null}
+          ]
+        },
+        {
+          "id": "afternoon_tea_dine_in",
+          "name": "Afternoon Tea",
+          "price": 55.00,
+          "note": "For two.",
+          "items": [
+            {"name": "Afternoon Tea for Two", "description": "An assortment of tea sandwiches, homemade scones with jam and whipped cream, fruit and homemade desserts made onsite. Includes tea or coffee.", "image_url": null}
+          ]
+        },
+        {
+          "id": "salads_dine_in",
+          "name": "Salads",
+          "price": 19.95,
+          "note": "Includes a homemade scone from our bakery.",
+          "items": [
+            {"name": "Beet and Goat Cheese", "description": "Spring mix, candied walnuts, pickled beets, goat cheese, honey citrus vinaigrette. Choice of grilled chicken, chicken salad or tuna.", "image_url": null},
+            {"name": "Grilled Chicken Caesar", "description": "Romaine, grilled chicken breast, real bacon bits, croutons, parmesan, homemade creamy Caesar dressing.", "image_url": null},
+            {"name": "Garden", "description": "Spring mix, red pepper, tomato, cucumber, honey citrus vinaigrette.", "image_url": null},
+            {"name": "The Toasted Walnut Signature", "description": "Spinach, fresh seasonal fruit, dried cranberries, feta, candied walnuts, honey citrus vinaigrette. Choice of grilled chicken, chicken salad or tuna.", "image_url": null}
+          ]
+        }
+      ]
+    },
+    {
+      "id": "lunch_take_out",
+      "name": "Lunch (Take-Out)",
+      "subtitle": "March 2026",
+      "source": "Lunch-Menu-Take-out-march-2026.pdf",
+      "subcategories": [
+        {
+          "id": "panini_sandwiches_take_out",
+          "name": "Panini Sandwiches",
+          "price": 14.75,
+          "note": "Served on grilled naan bread; Ste. Anne's Five Seed gluten-free available.",
+          "items": [
+            {"name": "Club House Stack", "description": "Grilled chicken breast, bacon, tomato and cheddar cheese with a side of chipotle sauce.", "image_url": null},
+            {"name": "Roasted Red Pepper", "description": "Dill cream cheese, roasted red peppers, zucchini, red onion, feta cheese, drizzle of homemade herb vinaigrette.", "image_url": null},
+            {"name": "Cranberry and Chicken", "description": "Grilled chicken breast, smoked gouda cheese, apple slices and homemade cranberry walnut chutney.", "image_url": null},
+            {"name": "Gourmet Grilled Cheese", "description": "Bacon, mozzarella cheese, brie cheese and apple slices on grilled naan bread.", "image_url": null},
+            {"name": "Fig and Apple", "description": "Ham, house made fig and apple chutney, brie cheese and apple slices on grilled pumpernickel rye bread.", "image_url": null}
+          ]
+        },
+        {
+          "id": "traditional_sandwiches_take_out",
+          "name": "Traditional Sandwiches",
+          "price": 12.75,
+          "note": "Ste. Anne's Five Seed gluten-free available.",
+          "items": [
+            {"name": "Chicken Salad", "description": "Diced chicken with mayonnaise, apple slices, cheddar cheese and lettuce served on multigrain bread.", "image_url": null},
+            {"name": "Cucumber and Cream Cheese", "description": "Lettuce, cucumber, dill cream cheese and sprouts served on marble rye bread.", "image_url": null},
+            {"name": "Egg Salad", "description": "Chopped egg salad with cucumber and mayonnaise served on multigrain bread.", "image_url": null},
+            {"name": "Ham and Cheese", "description": "Black forest ham, cheddar cheese, lettuce, cucumber and hot honey mustard served on multigrain bread.", "image_url": null},
+            {"name": "Loaded Tuna", "description": "Flaked tuna with lettuce, cucumber, tomato, cheddar cheese, sprouts, mayonnaise and hot honey mustard served on multigrain bread.", "image_url": null},
+            {"name": "BLT", "description": "Bacon, lettuce, tomato and mayonnaise served on toasted marble rye bread. Add cheddar cheese $2.50.", "image_url": null}
+          ]
+        },
+        {
+          "id": "wraps_take_out",
+          "name": "Wraps",
+          "price": 13.95,
+          "note": "Served on whole wheat wraps.",
+          "items": [
+            {"name": "Chicken Caesar", "description": "Grilled chicken breast, real bacon bits, romaine, parmesan cheese and homemade creamy Caesar dressing.", "image_url": null},
+            {"name": "Chipotle Chicken", "description": "Grilled chicken breast, bacon, mozzarella and cheddar cheese, romaine lettuce and chipotle dressing.", "image_url": null},
+            {"name": "Cranberry Chicken Salad", "description": "Chicken salad, spring mix, apple slices and homemade cranberry chutney.", "image_url": null},
+            {"name": "Maple Chicken", "description": "Grilled chicken breast, bacon, goat cheese, spinach and caramelized onions in maple syrup.", "image_url": null},
+            {"name": "Veggie Lovers (vegetarian)", "description": "Spinach, tomato, red peppers, cucumbers, feta cheese, hummus, red pepper jelly and sprouts.", "image_url": null}
+          ]
+        },
+        {
+          "id": "soups_take_out",
+          "name": "Soups",
+          "price": 10.50,
+          "note": "Includes a homemade scone from our bakery, on us.",
+          "items": [
+            {"name": "Mango Curry Butternut Squash", "description": "Our top requested soup.", "image_url": null},
+            {"name": "Soup of the Day", "description": "Homemade daily with the freshest ingredients, ask your server for details.", "image_url": null}
+          ]
+        },
+        {
+          "id": "combos_take_out",
+          "name": "Combos",
+          "price": null,
+          "note": null,
+          "items": [
+            {"name": "Crustless Quiche, Salad and Scone", "price": 18.95, "description": "Our homemade quiche of the day, signature salad and choice of scone.", "image_url": null},
+            {"name": "Crustless Quiche, Soup and Scone", "price": 18.95, "description": "Our homemade quiche of the day, cup of Mango Curry Butternut Squash soup and choice of scone.", "image_url": null}
+          ]
+        },
+        {
+          "id": "afternoon_tea_box_take_out",
+          "name": "Afternoon Tea Box",
+          "price": 55.00,
+          "note": "For two.",
+          "items": [
+            {"name": "Afternoon Tea Box for Two", "description": "An assortment of tea sandwiches, homemade scones with jam and whipped cream, fruit and homemade desserts. Includes two raspberry tea bags.", "image_url": null}
+          ]
+        },
+        {
+          "id": "salads_take_out",
+          "name": "Salads",
+          "price": 19.95,
+          "note": "Includes a homemade scone from our bakery, on us.",
+          "items": [
+            {"name": "Beet and Goat Cheese", "description": "Spring mix, candied walnuts, pickled beets, goat cheese, honey citrus vinaigrette. Choice of grilled chicken, chicken salad or tuna.", "image_url": null},
+            {"name": "Grilled Chicken Caesar", "description": "Romaine, grilled chicken breast, real bacon bits, croutons, parmesan, homemade creamy Caesar dressing.", "image_url": null},
+            {"name": "Garden", "description": "Spring mix, red pepper, tomato, cucumber, honey citrus vinaigrette. Choice of grilled chicken, chicken salad or tuna.", "image_url": null},
+            {"name": "The Toasted Walnut Signature", "description": "Spinach, fresh seasonal fruit, dried cranberries, feta, candied walnuts, honey citrus vinaigrette. Choice of grilled chicken, chicken salad or tuna.", "image_url": null}
+          ]
+        }
+      ]
+    },
+    {
+      "id": "bakery",
+      "name": "Bakery",
+      "subtitle": null,
+      "source": "thetoastedwalnut.com/bakery/",
+      "subcategories": [
+        {
+          "id": "bars_brownies_squares",
+          "name": "Bars, Brownies and Squares",
+          "category_url": "https://thetoastedwalnut.com/product-category/bars-brownies-and-squares/",
+          "items": [
+            {"name": "Banana Bread Bar", "price": 4.95, "pack_size": "single", "description": "A moist banana bread with a brown butter frosting topped with banana chips.", "image_url": "https://thetoastedwalnut.com/wp-content/uploads/2021/04/original-55-600x600.jpeg", "needs_photo": false, "product_url": "https://thetoastedwalnut.com/product/banana-bread-bar/"},
+            {"name": "Carrot Cake", "price": 6.50, "pack_size": "single (slice)", "description": null, "image_url": "https://thetoastedwalnut.com/wp-content/uploads/2021/04/original-72-600x600.jpeg", "needs_photo": false, "product_url": "https://thetoastedwalnut.com/product/carrot-cake/"},
+            {"name": "Date Square", "price": 4.85, "pack_size": "single", "description": null, "image_url": "https://thetoastedwalnut.com/wp-content/uploads/2021/04/original-10-scaled.jpeg", "needs_photo": false, "product_url": "https://thetoastedwalnut.com/product/date-square/"},
+            {"name": "Lemon Square", "price": 4.25, "pack_size": "single", "description": null, "image_url": "https://thetoastedwalnut.com/wp-content/uploads/2021/04/original-56-600x600.jpeg", "needs_photo": false, "product_url": "https://thetoastedwalnut.com/product/lemon-square/"},
+            {"name": "Raspberry Coconut Square", "price": 4.25, "pack_size": "single", "description": "Melt in your mouth shortbread base, a thick layer of our homemade raspberry jam, with a sweetened buttery coconut topping, sprinkled with icing sugar.", "image_url": "https://thetoastedwalnut.com/wp-content/uploads/2021/04/original-64-600x600.jpeg", "needs_photo": false, "product_url": "https://thetoastedwalnut.com/product/raspberry-coconut/"},
+            {"name": "Skor Brownie", "price": 4.95, "pack_size": "single", "description": null, "image_url": "https://thetoastedwalnut.com/wp-content/uploads/2021/04/original-62-600x600.jpeg", "needs_photo": false, "product_url": "https://thetoastedwalnut.com/product/skor-brownie/"}
+          ]
+        },
+        {
+          "id": "butter_tarts",
+          "name": "Butter Tarts",
+          "category_url": "https://thetoastedwalnut.com/product-category/butter-tarts/",
+          "items": [
+            {"name": "Plain Butter Tarts", "price": 15.00, "pack_size": "1/2 dozen", "description": "1/2 dozen package", "image_url": "https://thetoastedwalnut.com/wp-content/uploads/2021/04/original-11-600x600.jpeg", "needs_photo": false, "product_url": "https://thetoastedwalnut.com/product/plain/"},
+            {"name": "Raisin Butter Tarts", "price": 15.00, "pack_size": "1/2 dozen", "description": "1/2 dozen package", "image_url": "https://thetoastedwalnut.com/wp-content/uploads/2021/04/original-12-600x600.jpeg", "needs_photo": false, "product_url": "https://thetoastedwalnut.com/product/raisin/"},
+            {"name": "Skor Butter Tarts", "price": 15.00, "pack_size": "1/2 dozen", "description": "1/2 dozen package", "image_url": "https://thetoastedwalnut.com/wp-content/uploads/2021/04/original-57-600x397.jpeg", "needs_photo": false, "product_url": "https://thetoastedwalnut.com/product/skor/"},
+            {"name": "Walnut Butter Tarts", "price": 15.00, "pack_size": "1/2 dozen", "description": "1/2 dozen package", "image_url": "https://thetoastedwalnut.com/wp-content/uploads/2021/04/original-13-600x600.jpeg", "needs_photo": false, "product_url": "https://thetoastedwalnut.com/product/walnut/"}
+          ]
+        },
+        {
+          "id": "cookies",
+          "name": "Cookies",
+          "category_url": "https://thetoastedwalnut.com/product-category/cookies/",
+          "items": [
+            {"name": "Chocolate Chip Cookie", "price": 2.95, "pack_size": "single", "description": "As traditional as it gets with mini semi-sweet chocolate chips.", "image_url": "https://thetoastedwalnut.com/wp-content/uploads/2022/11/original-6-600x600.jpeg", "needs_photo": false, "product_url": "https://thetoastedwalnut.com/product/chocolate-chip-cookie-2/"},
+            {"name": "Confetti Cookie", "price": 2.95, "pack_size": "single", "description": "Crunchy on the outside, chewy on the inside and loaded with rainbow sprinkles.", "image_url": "https://thetoastedwalnut.com/wp-content/uploads/2021/04/original-21-600x600.jpeg", "needs_photo": false, "product_url": "https://thetoastedwalnut.com/product/confetti-cookie/"},
+            {"name": "Cookie Pizza", "price": 45.00, "pack_size": "whole, personalizable", "description": "Large cookie with option to add text. Maximum 26 characters.", "image_url": "https://thetoastedwalnut.com/wp-content/uploads/2022/11/original-3-600x600.jpeg", "needs_photo": false, "product_url": "https://thetoastedwalnut.com/product/cookie-pizza/"},
+            {"name": "Gingersnaps", "price": 6.00, "pack_size": "1/2 dozen (6 pack)", "description": "1/2 dozen package", "image_url": "https://thetoastedwalnut.com/wp-content/uploads/2021/04/original-46-600x600.jpeg", "needs_photo": false, "product_url": "https://thetoastedwalnut.com/product/gingersnaps-6-pack/"},
+            {"name": "Peanut Butter Chocolate Chip Cookie", "price": 2.95, "pack_size": "single", "description": null, "image_url": "https://thetoastedwalnut.com/wp-content/uploads/2021/04/original-38-600x600.jpeg", "needs_photo": false, "product_url": "https://thetoastedwalnut.com/product/peanut-butter-chocolate-chip-cookie/"}
+          ]
+        },
+        {
+          "id": "cupcakes",
+          "name": "Cupcakes",
+          "category_url": "https://thetoastedwalnut.com/product-category/cupcakes/",
+          "items": [
+            {"name": "Confetti Cupcakes", "price": 20.00, "pack_size": "1/2 dozen", "description": "Cupcakes are sold by the 1/2 dozen package. We require 48 hours notice.", "image_url": "https://thetoastedwalnut.com/wp-content/uploads/woocommerce-placeholder-600x600.png", "needs_photo": true, "product_url": "https://thetoastedwalnut.com/product/confetti/"},
+            {"name": "Seasonal Chocolate Cupcakes", "price": 20.00, "pack_size": "1/2 dozen", "description": "Cupcakes are sold by the 1/2 dozen package. We require 48 hours notice.", "image_url": "https://thetoastedwalnut.com/wp-content/uploads/woocommerce-placeholder-600x600.png", "needs_photo": true, "product_url": "https://thetoastedwalnut.com/product/seasonal-chocolate/"},
+            {"name": "Seasonal Vanilla Cupcakes", "price": 20.00, "pack_size": "1/2 dozen", "description": "Cupcakes are sold by the 1/2 dozen package. We require 48 hours notice.", "image_url": "https://thetoastedwalnut.com/wp-content/uploads/woocommerce-placeholder-600x600.png", "needs_photo": true, "product_url": "https://thetoastedwalnut.com/product/seasonal-vanilla/"}
+          ]
+        },
+        {
+          "id": "pastry",
+          "name": "Pastry",
+          "category_url": "https://thetoastedwalnut.com/product-category/pastry/",
+          "items": [
+            {"name": "Croissant", "price": 3.50, "pack_size": "single", "description": "Delicious butter croissant made fresh every morning.", "image_url": "https://thetoastedwalnut.com/wp-content/uploads/2022/03/original-1-600x600.jpeg", "needs_photo": false, "product_url": "https://thetoastedwalnut.com/product/croissant/"},
+            {"name": "Savory Danish", "price": 5.95, "pack_size": "single", "description": "Scrumptious pastry topped with fresh ingredients and sprinkled with mozzarella and cheddar cheese.", "image_url": "https://thetoastedwalnut.com/wp-content/uploads/woocommerce-placeholder-600x600.png", "needs_photo": true, "product_url": "https://thetoastedwalnut.com/product/savory-danish/"}
+          ]
+        },
+        {
+          "id": "pies",
+          "name": "Pies",
+          "category_url": "https://thetoastedwalnut.com/product-category/pies/",
+          "items": [
+            {"name": "Apple Crumble Pie", "price": 18.00, "pack_size": "whole pie", "description": "Spiced local apples topped with our signature oat crumble.", "image_url": "https://thetoastedwalnut.com/wp-content/uploads/2021/04/ToastedWalnut_224-600x400.jpg", "needs_photo": false, "product_url": "https://thetoastedwalnut.com/product/apple-crumble/"},
+            {"name": "Apple Pie", "price": 18.00, "pack_size": "whole pie", "description": "Spiced local apples wrapped in our homemade pastry. Just like grandma used to make.", "image_url": "https://thetoastedwalnut.com/wp-content/uploads/2021/04/ToastedWalnut_224-600x400.jpg", "needs_photo": false, "product_url": "https://thetoastedwalnut.com/product/apple/"},
+            {"name": "Blueberry Pie", "price": 18.00, "pack_size": "whole pie", "description": "Wild blueberries sweetened with sugar and lemon, wrapped in our homemade pastry.", "image_url": "https://thetoastedwalnut.com/wp-content/uploads/2022/11/original-4-600x394.jpeg", "needs_photo": false, "product_url": "https://thetoastedwalnut.com/product/blueberry-pie/"},
+            {"name": "Cherry Pie", "price": 18.00, "pack_size": "whole pie", "description": "Cherry pie filling wrapped in our homemade pastry.", "image_url": "https://thetoastedwalnut.com/wp-content/uploads/woocommerce-placeholder-600x600.png", "needs_photo": true, "product_url": "https://thetoastedwalnut.com/product/cherry-pie-2/"},
+            {"name": "Father Christmas Pie", "price": 30.00, "pack_size": "whole pie, seasonal", "description": "An Oreo cookie crust layered with chocolate ganache topped with a whipped peppermint cheesecake filling.", "image_url": "https://thetoastedwalnut.com/wp-content/uploads/woocommerce-placeholder-600x600.png", "needs_photo": true, "product_url": "https://thetoastedwalnut.com/product/father-christmas-pie/"},
+            {"name": "Pecan Pie", "price": 20.00, "pack_size": "whole pie", "description": null, "image_url": "https://thetoastedwalnut.com/wp-content/uploads/2021/04/ToastedWalnut_224-600x400.jpg", "needs_photo": false, "product_url": "https://thetoastedwalnut.com/product/pecan-pie/"},
+            {"name": "Raspberry Pie", "price": 18.00, "pack_size": "whole pie", "description": "Sweetened raspberries with lemon wrapped in our homemade pastry or crumble topping.", "image_url": "https://thetoastedwalnut.com/wp-content/uploads/2022/11/original-7-600x600.jpeg", "needs_photo": false, "product_url": "https://thetoastedwalnut.com/product/raspberry-pie/"},
+            {"name": "Strawberry Rhubarb Pie", "price": 18.00, "pack_size": "whole pie", "description": "House made strawberry and rhubarb filling wrapped in our melt in your mouth pastry.", "image_url": "https://thetoastedwalnut.com/wp-content/uploads/2021/04/ToastedWalnut_224-600x400.jpg", "needs_photo": false, "product_url": "https://thetoastedwalnut.com/product/strawberry-rhubarb-pie/"}
+          ]
+        },
+        {
+          "id": "quiche",
+          "name": "Quiche",
+          "category_url": "https://thetoastedwalnut.com/product-category/full-quiche/",
+          "items": [
+            {"name": "Crustless Quiche", "price": 25.00, "pack_size": "whole, serves 6, gluten free", "description": "Breakfast, Brunch, Lunch, Dinner? One of the most versatile meals. We make them fresh daily. Our Crustless Quiche is Gluten Free. Serves 6", "image_url": "https://thetoastedwalnut.com/wp-content/uploads/woocommerce-placeholder-600x600.png", "needs_photo": true, "product_url": "https://thetoastedwalnut.com/product/quiche/"},
+            {"name": "Crustless Spinach and Cheddar Quiche", "price": 25.00, "pack_size": "whole", "description": null, "image_url": "https://thetoastedwalnut.com/wp-content/uploads/2024/09/original-600x600.jpeg", "needs_photo": false, "product_url": "https://thetoastedwalnut.com/product/crustless-spinach-cheddar/"},
+            {"name": "Quiche With Crust", "price": 25.00, "pack_size": "whole", "description": "Breakfast, Brunch, Lunch, Dinner? One of the most versatile meals. We make them fresh daily.", "image_url": "https://thetoastedwalnut.com/wp-content/uploads/2021/04/38091959-441F-4D90-9995-90A01757F027-600x800.jpeg", "needs_photo": false, "product_url": "https://thetoastedwalnut.com/product/crustless-quiche-2/"}
+          ]
+        },
+        {
+          "id": "scones",
+          "name": "Scones",
+          "category_url": "https://thetoastedwalnut.com/product-category/scones/",
+          "items": [
+            {"name": "Cheese and Herb Scones", "price": 16.00, "pack_size": "6 (half dozen)", "description": "Six herb and cheddar cheese.", "image_url": "https://thetoastedwalnut.com/wp-content/uploads/2021/04/original-48-600x600.jpeg", "needs_photo": false, "product_url": "https://thetoastedwalnut.com/product/savoury/"},
+            {"name": "Sweet Scones", "price": 16.00, "pack_size": "6 (3 blueberry + 3 cranberry)", "description": "The perfect fruit scone combination. Three wild blueberry and three tart cranberry scones. Don't forget to add on a jar of our signature strawberry jam before checking out.", "image_url": "https://thetoastedwalnut.com/wp-content/uploads/2021/04/original-37-600x600.jpeg", "needs_photo": false, "product_url": "https://thetoastedwalnut.com/product/sweet/"}
+          ]
+        },
+        {
+          "id": "shortbread",
+          "name": "Shortbread",
+          "category_url": "https://thetoastedwalnut.com/product-category/shortbread/",
+          "items": [
+            {"name": "Cranberry White Chocolate Shortbread", "price": 15.00, "pack_size": "12 pack", "description": "Our traditional shortbread loaded with dried cranberries and white chocolate chips.", "image_url": "https://thetoastedwalnut.com/wp-content/uploads/2021/04/original-45-600x600.jpeg", "needs_photo": false, "product_url": "https://thetoastedwalnut.com/product/cranberry-white-chocolate/"},
+            {"name": "Plain Shortbread", "price": 15.00, "pack_size": "12 pack", "description": null, "image_url": "https://thetoastedwalnut.com/wp-content/uploads/2021/04/original-47-600x600.jpeg", "needs_photo": false, "product_url": "https://thetoastedwalnut.com/product/plain-3/"},
+            {"name": "Skor Shortbread", "price": 15.00, "pack_size": "12 pack", "description": null, "image_url": "https://thetoastedwalnut.com/wp-content/uploads/2021/04/original-63-600x600.jpeg", "needs_photo": false, "product_url": "https://thetoastedwalnut.com/product/skor-2/"}
+          ]
+        }
+      ]
+    },
+    {
+      "id": "catering",
+      "name": "Catering",
+      "subtitle": null,
+      "source": "thetoastedwalnut.com/catering-menu/",
+      "subcategories": [
+        {
+          "id": "catering_appetizers_cold",
+          "name": "Appetizers - Cold",
+          "category_url": "https://thetoastedwalnut.com/product-category/catering-appetizers-cold/",
+          "items": [
+            {"name": "Caprese Skewers", "price": 40.00, "pack_size": "12 pieces", "description": "Twelve pieces -- cherry tomato, bocconcini and basil with prosciutto.", "image_url": "https://thetoastedwalnut.com/wp-content/uploads/2021/04/caprese-skewers-600x800.jpg", "needs_photo": false, "product_url": "https://thetoastedwalnut.com/product/caprese-skewers/"},
+            {"name": "Charcuterie Tray", "price": 95.00, "pack_size": null, "description": "A selection of meat, cheese, pickles, crackers, fruit, preserves and nuts.", "image_url": "https://thetoastedwalnut.com/wp-content/uploads/2021/04/charcuterie-600x800.jpg", "needs_photo": false, "product_url": "https://thetoastedwalnut.com/product/charcuterie/"},
+            {"name": "Cheese and Fruit Tray", "price": 65.00, "pack_size": null, "description": "An assortment of Brie, smoked gouda, old cheddar, green and red grapes, seasonal berries.", "image_url": "https://thetoastedwalnut.com/wp-content/uploads/woocommerce-placeholder-600x600.png", "needs_photo": true, "product_url": "https://thetoastedwalnut.com/product/cheese-fruit/"},
+            {"name": "Cheese Tray", "price": 68.95, "pack_size": null, "description": "An assortment of brie, smoked gouda, old cheddar. Served with crackers.", "image_url": "https://thetoastedwalnut.com/wp-content/uploads/woocommerce-placeholder-600x600.png", "needs_photo": true, "product_url": "https://thetoastedwalnut.com/product/cheese-tray/"},
+            {"name": "Date Night Charcuterie Box", "price": 50.00, "pack_size": "serves 2", "description": "Serves 2 people", "image_url": "https://thetoastedwalnut.com/wp-content/uploads/2021/04/original-60-600x600.jpeg", "needs_photo": false, "product_url": "https://thetoastedwalnut.com/product/date-night-charcuterie/"},
+            {"name": "Grazing Tray", "price": 75.00, "pack_size": null, "description": "A selection of fruit, cheese, chocolate and nuts.", "image_url": "https://thetoastedwalnut.com/wp-content/uploads/2021/04/D41A0ED5-0589-44BE-A5D3-C2C21A1BA4EC-600x678.jpeg", "needs_photo": false, "product_url": "https://thetoastedwalnut.com/product/grazing-tray/"},
+            {"name": "Pickle Tray", "price": 60.00, "pack_size": null, "description": "An assortment of pickled preserves: garlic dill pickles, pickled green beans, pickled asparagus, bread and butter pickles and olives.", "image_url": "https://thetoastedwalnut.com/wp-content/uploads/woocommerce-placeholder-600x600.png", "needs_photo": true, "product_url": "https://thetoastedwalnut.com/product/pickle-tray/"},
+            {"name": "Veggies and Dip", "price": 40.00, "pack_size": null, "description": "Crisp vegetables served with homemade hummus.", "image_url": "https://thetoastedwalnut.com/wp-content/uploads/2021/04/vegetable-tray-600x800.jpg", "needs_photo": false, "product_url": "https://thetoastedwalnut.com/product/veggies-dip/"}
+          ]
+        },
+        {
+          "id": "catering_appetizers_hot",
+          "name": "Appetizers - Hot",
+          "category_url": "https://thetoastedwalnut.com/product-category/catering-appetizers-hot/",
+          "items": [
+            {"name": "Buffalo Chicken Dip", "price": 50.00, "pack_size": "serves 10", "description": "Serves 10. A creamy and spicy chicken dip, served with Tostitos and naan bread. Perfect for holiday gatherings. All you have to do is heat and serve.", "image_url": "https://thetoastedwalnut.com/wp-content/uploads/2021/09/DDA80F17-11C1-47DE-90A9-25EA0332B709-600x800.jpeg", "needs_photo": false, "product_url": "https://thetoastedwalnut.com/product/buffalo-chicken-dip/"},
+            {"name": "Mini Sausage Rolls", "price": 45.00, "pack_size": "12 pieces", "description": "Twelve pieces -- bite-sized sausage rolls wrapped in our own pastry and served with our homemade mango chutney.", "image_url": "https://thetoastedwalnut.com/wp-content/uploads/woocommerce-placeholder-600x600.png", "needs_photo": true, "product_url": "https://thetoastedwalnut.com/product/mini-sausage-rolls/"},
+            {"name": "Quiche Tartlettes", "price": 45.00, "pack_size": "12 pieces", "description": "Twelve pieces -- spinach and cheese mini quiche in our homemade pastry shells.", "image_url": "https://thetoastedwalnut.com/wp-content/uploads/2021/04/quiche-tartletes-600x900.jpg", "needs_photo": false, "product_url": "https://thetoastedwalnut.com/product/quiche-tartlettes/"},
+            {"name": "Stuffed Mushroom Caps", "price": 35.00, "pack_size": "12 pieces", "description": "Twelve pieces -- mushrooms stuffed with a house made herb and garlic cream cheese topped with herbed breadcrumbs.", "image_url": "https://thetoastedwalnut.com/wp-content/uploads/woocommerce-placeholder-600x600.png", "needs_photo": true, "product_url": "https://thetoastedwalnut.com/product/stuffed-mushroom-caps/"}
+          ]
+        },
+        {
+          "id": "catering_breakfast",
+          "name": "Breakfast",
+          "category_url": "https://thetoastedwalnut.com/product-category/catering-breakfast/",
+          "items": [
+            {"name": "Fresh Fruit Tray", "price": 49.95, "pack_size": null, "description": "Fresh seasonal fruit served with a cream cheese yogurt dip.", "image_url": "https://thetoastedwalnut.com/wp-content/uploads/2021/04/fruit-tray-600x800.jpg", "needs_photo": false, "product_url": "https://thetoastedwalnut.com/product/fresh-fruit-tray/"},
+            {"name": "Pastry Tray", "price": 49.99, "pack_size": "serves 10", "description": "An assortment of two Savoury Danish, two croissants, four scones and two muffins. Includes strawberry jam. Serves 10", "image_url": "https://thetoastedwalnut.com/wp-content/uploads/2021/04/bakery-100.jpg", "needs_photo": false, "product_url": "https://thetoastedwalnut.com/product/pastry-tray/"},
+            {"name": "Quiche - Catering", "price": 25.00, "pack_size": "serves 4-6, 9-inch", "description": "Serves 4 to 6 people. 9-inch pie shell. Our fluffy house made quiche with fresh ingredients. Choose to have it in our yummy melt in your mouth pastry or go gluten free with our crustless option.", "image_url": "https://thetoastedwalnut.com/wp-content/uploads/2021/04/38091959-441F-4D90-9995-90A01757F027-600x800.jpeg", "needs_photo": false, "product_url": "https://thetoastedwalnut.com/product/quiche-2/"},
+            {"name": "Scone Tray", "price": 42.50, "pack_size": null, "description": "An assortment of blueberry, cheese and herb, cranberry. Includes butter and strawberry jam.", "image_url": "https://thetoastedwalnut.com/wp-content/uploads/2021/04/ToastedWalnut_60-600x900.jpg", "needs_photo": false, "product_url": "https://thetoastedwalnut.com/product/scone-tray-2/"}
+          ]
+        },
+        {
+          "id": "catering_desserts",
+          "name": "Desserts",
+          "category_url": "https://thetoastedwalnut.com/product-category/catering-desserts/",
+          "items": [
+            {"name": "Assorted Square Platter", "price": 45.00, "pack_size": null, "description": "An assortment of Skor brownies, date squares, butter tarts, banana bread bars, carrot cake and lemon squares. A mouthwatering sample of our staple desserts and customer favorites, all made in house. If you need a nut free option, please specify. Please note we are not a nut free facility and cannot guarantee against cross contamination.", "image_url": "https://thetoastedwalnut.com/wp-content/uploads/2021/04/6095EF45-A62E-42CD-BBE1-6F3C51A389EA-600x800.jpeg", "needs_photo": false, "product_url": "https://thetoastedwalnut.com/product/assorted-square-platter-2/"},
+            {"name": "Carrot Cake", "price": 70.00, "pack_size": "whole cake", "description": "Moist carrot cake with pineapple, coconut and walnuts. Iced with lemon cream cheese icing.", "image_url": "https://thetoastedwalnut.com/wp-content/uploads/woocommerce-placeholder-600x600.png", "needs_photo": true, "product_url": "https://thetoastedwalnut.com/product/carrot-cake-2/"}
+          ]
+        },
+        {
+          "id": "catering_entrees",
+          "name": "Entrees",
+          "category_url": "https://thetoastedwalnut.com/product-category/catering-entrees/",
+          "items": [
+            {"name": "Bacon Mac 'N Cheese", "price": 60.00, "pack_size": null, "description": "Macaroni noodles soaked in a creamy cheese sauce with smoky bacon bits, then topped with more cheese.", "image_url": "https://thetoastedwalnut.com/wp-content/uploads/woocommerce-placeholder-600x600.png", "needs_photo": true, "product_url": "https://thetoastedwalnut.com/product/bacon-mac-n-cheese/"},
+            {"name": "Jalapeno Mac 'N Cheese", "price": 55.00, "pack_size": null, "description": null, "image_url": "https://thetoastedwalnut.com/wp-content/uploads/2022/03/79A6D7A1-B327-4642-8C15-37251D9F4D81-600x601.jpeg", "needs_photo": false, "product_url": "https://thetoastedwalnut.com/product/jalapeno-mac-n-cheese/"},
+            {"name": "Meat Lasagna - Catering", "price": 105.00, "pack_size": null, "description": null, "image_url": "https://thetoastedwalnut.com/wp-content/uploads/2021/04/original-77-600x600.jpeg", "needs_photo": false, "product_url": "https://thetoastedwalnut.com/product/meat-lasagna/"},
+            {"name": "Shepherd's Pie - Catering", "price": 105.00, "pack_size": null, "description": null, "image_url": "https://thetoastedwalnut.com/wp-content/uploads/woocommerce-placeholder-600x600.png", "needs_photo": true, "product_url": "https://thetoastedwalnut.com/product/shepherds-pie/"},
+            {"name": "Vegetable Lasagna - Catering", "price": 95.00, "pack_size": null, "description": null, "image_url": "https://thetoastedwalnut.com/wp-content/uploads/woocommerce-placeholder-600x600.png", "needs_photo": true, "product_url": "https://thetoastedwalnut.com/product/vegetable-lasagna/"}
+          ]
+        },
+        {
+          "id": "catering_lunch_boxes",
+          "name": "Lunch Boxes",
+          "category_url": "https://thetoastedwalnut.com/product-category/catering-lunch-boxes/",
+          "items": [
+            {"name": "Sandwich Lunch Box", "price": 21.50, "pack_size": null, "description": "Select choice of one sandwich. Served with The Toasted Walnut Signature salad and a Skor brownie.", "image_url": "https://thetoastedwalnut.com/wp-content/uploads/woocommerce-placeholder-600x600.png", "needs_photo": true, "product_url": "https://thetoastedwalnut.com/product/sandwich-lunch-box/"},
+            {"name": "Wrap Lunch Box", "price": 22.50, "pack_size": null, "description": "Select one wrap from option list. Served with The Toasted Walnut Signature salad and a Skor brownie.", "image_url": "https://thetoastedwalnut.com/wp-content/uploads/woocommerce-placeholder-600x600.png", "needs_photo": true, "product_url": "https://thetoastedwalnut.com/product/wrap-lunch-box/"}
+          ]
+        },
+        {
+          "id": "catering_packages",
+          "name": "Packages",
+          "category_url": "https://thetoastedwalnut.com/product-category/catering-packages/",
+          "items": [
+            {"name": "Brunch", "price": 79.95, "pack_size": "serves 6", "description": "Serves 6. Includes one spinach and cheese quiche, six assorted scones with butter and a jar of strawberry jam, one Toasted Walnut Signature salad and fresh seasonal fruit.", "image_url": "https://thetoastedwalnut.com/wp-content/uploads/2021/04/original-69-600x523.jpeg", "needs_photo": false, "product_url": "https://thetoastedwalnut.com/product/brunch/"}
+          ]
+        },
+        {
+          "id": "catering_salads",
+          "name": "Salads",
+          "category_url": "https://thetoastedwalnut.com/product-category/catering-salads/",
+          "items": [
+            {"name": "Beet and Goat Cheese Salad", "price": 74.95, "pack_size": "serves 10", "description": "Serves 10.", "image_url": "https://thetoastedwalnut.com/wp-content/uploads/2021/04/ToastedWalnut_88-600x900.jpg", "needs_photo": false, "product_url": "https://thetoastedwalnut.com/product/beet-goat-cheese-salad/"},
+            {"name": "Broccoli Salad", "price": 74.95, "pack_size": "serves 10", "description": "Serves 10. Fresh broccoli salad with real bacon bits, red onions, raisins and sunflower seeds in a creamy dressing.", "image_url": "https://thetoastedwalnut.com/wp-content/uploads/woocommerce-placeholder-600x600.png", "needs_photo": true, "product_url": "https://thetoastedwalnut.com/product/broccoli-salad/"},
+            {"name": "Caesar Salad", "price": 74.95, "pack_size": "serves 10", "description": "Serves 10. Romaine lettuce with real bacon bits, homemade croutons, parmesan cheese and creamy homemade Caesar dressing.", "image_url": "https://thetoastedwalnut.com/wp-content/uploads/woocommerce-placeholder-600x600.png", "needs_photo": true, "product_url": "https://thetoastedwalnut.com/product/caesar-salad-2/"},
+            {"name": "Garden Salad", "price": 74.95, "pack_size": "serves 10", "description": "Serves 10.", "image_url": "https://thetoastedwalnut.com/wp-content/uploads/woocommerce-placeholder-600x600.png", "needs_photo": true, "product_url": "https://thetoastedwalnut.com/product/garden-salad-2/"},
+            {"name": "Greek Salad", "price": 74.95, "pack_size": "serves 10", "description": "Serves 10.", "image_url": "https://thetoastedwalnut.com/wp-content/uploads/woocommerce-placeholder-600x600.png", "needs_photo": true, "product_url": "https://thetoastedwalnut.com/product/greek-salad/"},
+            {"name": "Macaroni Salad", "price": 74.95, "pack_size": "serves 10", "description": "Serves 10.", "image_url": "https://thetoastedwalnut.com/wp-content/uploads/woocommerce-placeholder-600x600.png", "needs_photo": true, "product_url": "https://thetoastedwalnut.com/product/macaroni-salad/"},
+            {"name": "Pasta Caesar Salad", "price": 74.95, "pack_size": "serves 10", "description": "Serves 10.", "image_url": "https://thetoastedwalnut.com/wp-content/uploads/woocommerce-placeholder-600x600.png", "needs_photo": true, "product_url": "https://thetoastedwalnut.com/product/pasta-caesar-salad/"},
+            {"name": "Penne Pasta Salad", "price": 74.95, "pack_size": "serves 10", "description": "Serves 10", "image_url": "https://thetoastedwalnut.com/wp-content/uploads/woocommerce-placeholder-600x600.png", "needs_photo": true, "product_url": "https://thetoastedwalnut.com/product/penne-pasta-salad/"},
+            {"name": "Potato Salad", "price": 74.95, "pack_size": "serves 10", "description": "Serves 10.", "image_url": "https://thetoastedwalnut.com/wp-content/uploads/woocommerce-placeholder-600x600.png", "needs_photo": true, "product_url": "https://thetoastedwalnut.com/product/potato-salad/"},
+            {"name": "The Toasted Walnut Signature Salad", "price": 70.00, "pack_size": "serves 10-20", "description": "Serves 10 to 20. Spinach salad with fresh seasonal fruit, dried cranberries, feta cheese and candied walnuts. Dressed with our homemade honey-citrus vinaigrette.", "image_url": "https://thetoastedwalnut.com/wp-content/uploads/2021/04/original-26-600x600.jpeg", "needs_photo": false, "product_url": "https://thetoastedwalnut.com/product/the-toasted-walnut-signature-salad/"}
+          ]
+        },
+        {
+          "id": "catering_sandwich_trays",
+          "name": "Sandwich Trays",
+          "category_url": "https://thetoastedwalnut.com/product-category/catering-sandwich-trays/",
+          "items": [
+            {"name": "The Toasted Walnut Sandwich and Wrap Tray", "price_range": [68.95, 137.80], "pack_size": "size variants -- see note", "description": "An assortment of chicken salad, egg salad, tuna salad, ham and cheese, cucumber cream cheese, veggie lovers, chicken Caesar, chipotle chicken and maple chicken served on whole-wheat bread, whole-wheat wraps and croissants.", "image_url": "https://thetoastedwalnut.com/wp-content/uploads/2021/09/5C0F94B1-06A9-44C2-8722-C0B0CB360F54-600x660.jpeg", "needs_photo": false, "product_url": "https://thetoastedwalnut.com/product/the-toasted-walnut-sandwich-wrap-tray/", "note": "Price range suggests size variants (small/large tray) -- exact size-to-price mapping not shown on the product page; likely resolved by a variant selector at checkout."}
+          ]
+        }
+      ]
+    }
+  ]
+}

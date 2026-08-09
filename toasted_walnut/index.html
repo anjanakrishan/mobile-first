@@ -1,0 +1,756 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The Toasted Walnut — Menu</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --navy: #152238;
+    --navy-light: #1E2D4A;
+    --paper: #F8FAFC;
+    --card-bg: #FFFFFF;
+    --slate: #475569;
+    --ink: #0F172A;
+    --ink-muted: #64748B;
+    --line: #E2E8F0;
+    --shadow-sm: 0 1px 3px rgba(0,0,0,0.05);
+  }
+
+  * { box-sizing: border-box; -webkit-tap-highlight-color: transparent; }
+  body {
+    margin: 0; padding: 0;
+    background: #F1F5F9;
+    color: var(--ink);
+    font-family: 'Plus Jakarta Sans', -apple-system, sans-serif;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  .app-container {
+    max-width: 480px;
+    margin: 0 auto;
+    background: #FFFFFF;
+    min-height: 100vh;
+    box-shadow: 0 0 30px rgba(0,0,0,0.08);
+    position: relative;
+    padding-bottom: 90px;
+  }
+
+  /* --- TOP HEADER BAR --- */
+  .top-header-bar {
+    background: var(--navy);
+    padding: 10px 16px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end; /* Align dropdown to the right */
+    border-bottom: 1px solid var(--navy-light);
+  }
+
+  /* Dropdown Select on Right */
+  .breadcrumb-select {
+    background: rgba(255, 255, 255, 0.12);
+    color: #FFFFFF;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-size: 11.5px;
+    font-weight: 600;
+    padding: 5px 10px;
+    border-radius: 6px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    outline: none;
+    cursor: pointer;
+  }
+
+  .breadcrumb-select option {
+    background: var(--navy);
+    color: #FFFFFF;
+  }
+
+  /* --- BRAND HEADER BANNER --- */
+  header.brand-header {
+    background: #FFFFFF;
+    padding: 16px 20px;
+    text-align: center;
+    border-bottom: 1px solid var(--line);
+  }
+  .brand-logo-container {
+    max-width: 260px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .brand-logo-img {
+    width: 100%;
+    height: auto;
+    max-height: 75px;
+    object-fit: contain;
+  }
+  .shop-status {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    margin-top: 12px;
+    padding: 6px 12px;
+    border: 1px solid var(--line);
+    border-radius: 999px;
+    background: var(--paper);
+    color: var(--slate);
+    font-size: 11px;
+    font-weight: 600;
+  }
+  .shop-status-dot {
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    background: #16A34A;
+  }
+  .shop-status.is-closed .shop-status-dot { background: #DC2626; }
+  .shop-status-label { color: var(--ink); }
+
+  /* SEARCH & CATEGORY BAR */
+  .search-sticky {
+    position: sticky; top: 0; z-index: 90;
+    background: #FFFFFF;
+    border-bottom: 1px solid var(--line);
+    padding: 10px 16px;
+    box-shadow: var(--shadow-sm);
+  }
+  .search-box {
+    display: flex; align-items: center; gap: 8px;
+    background: var(--paper); border: 1px solid var(--line);
+    padding: 8px 12px; border-radius: 8px;
+  }
+  .search-box input { border: none; background: transparent; outline: none; width: 100%; font-size: 13.5px; color: var(--ink); }
+
+  .category-nav {
+    position: relative;
+    display: flex;
+    align-items: flex-start;
+    gap: 6px;
+    padding: 10px 16px 12px;
+    background: #FFFFFF;
+    border-bottom: 1px solid var(--line);
+  }
+  .category-menu-toggle {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    flex: 0 0 auto;
+    width: 38px;
+    height: 36px;
+    padding: 8px;
+    border: 1px solid var(--line);
+    border-radius: 10px;
+    background: #FFFFFF;
+    color: var(--navy);
+    box-shadow: var(--shadow-sm);
+    cursor: pointer;
+    transition: background 0.15s ease, border-color 0.15s ease, transform 0.15s ease;
+  }
+  .category-menu-toggle:hover,
+  .category-menu-toggle[aria-expanded="true"] {
+    background: var(--paper);
+    border-color: #CBD5E1;
+  }
+  .category-menu-toggle:active {
+    transform: scale(0.96);
+  }
+  .hamburger-icon {
+    display: inline-flex;
+    flex-direction: column;
+    gap: 3px;
+  }
+  .hamburger-icon span {
+    display: block;
+    width: 15px;
+    height: 2px;
+    border-radius: 2px;
+    background: currentColor;
+  }
+  .category-dropdown {
+    position: absolute;
+    top: calc(100% - 4px);
+    left: 16px;
+    z-index: 95;
+    min-width: 170px;
+    padding: 6px;
+    border: 1px solid var(--line);
+    border-radius: 8px;
+    background: #FFFFFF;
+    box-shadow: 0 8px 20px rgba(15, 23, 42, 0.12);
+  }
+  .category-dropdown[hidden] { display: none; }
+  .category-pill-list {
+    display: flex;
+    gap: 6px;
+    flex: 1 1 auto;
+    min-width: 0;
+    overflow-x: auto;
+    scrollbar-width: none;
+    padding: 1px 0 3px;
+  }
+  .category-pill-list::-webkit-scrollbar { display: none; }
+  .category-option {
+    display: block;
+    width: 100%;
+    padding: 9px 10px;
+    border: none;
+    border-radius: 6px;
+    background: transparent;
+    color: var(--slate);
+    font: inherit;
+    font-size: 12px;
+    font-weight: 600;
+    text-align: left;
+    cursor: pointer;
+  }
+  .category-option:hover,
+  .category-option.active { background: var(--paper); color: var(--navy); }
+  .cat-btn {
+    flex: 0 0 auto;
+    padding: 8px 14px;
+    border-radius: 999px;
+    font-size: 11.5px;
+    font-weight: 700;
+    letter-spacing: 0.01em;
+    border: 1px solid var(--line);
+    background: var(--paper);
+    color: var(--slate);
+    cursor: pointer;
+    transition: background 0.15s ease, border-color 0.15s ease, color 0.15s ease, transform 0.15s ease;
+  }
+  .cat-btn:hover {
+    background: #FFFFFF;
+    border-color: #CBD5E1;
+    color: var(--navy);
+  }
+  .cat-btn.active {
+    background: var(--navy);
+    border-color: var(--navy);
+    color: #FFFFFF;
+    box-shadow: 0 2px 6px rgba(21, 34, 56, 0.2);
+  }
+  .cat-btn:active {
+    transform: scale(0.97);
+  }
+
+  /* SERVICE MODE TOGGLE (DINE-IN VS TAKE-OUT) */
+  .mode-toggle-container {
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
+    margin: 14px 16px 0;
+    background: #F1F6FC;
+    border: 1px solid #DCE7F3;
+    border-radius: 12px;
+    padding: 9px;
+  }
+  .mode-toggle-label {
+    color: var(--slate);
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+  }
+  .mode-toggle-options { display: flex; gap: 4px; }
+  .mode-btn {
+    flex: 1;
+    padding: 10px 8px;
+    text-align: center;
+    border: 1px solid transparent;
+    background: transparent;
+    font-size: 12px;
+    font-weight: 700;
+    color: var(--slate);
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background 0.15s ease, color 0.15s ease, box-shadow 0.15s ease;
+  }
+  .mode-btn:hover { color: var(--navy); }
+  .mode-btn.active {
+    background: var(--navy);
+    color: #FFFFFF;
+    box-shadow: 0 2px 6px rgba(21, 34, 56, 0.2);
+  }
+  .mode-toggle-container + .menu-content { padding-top: 8px; }
+  .lunch-subcategory-shell {
+    position: relative;
+  }
+  .lunch-subcategory-shell[hidden] { display: none; }
+  .lunch-subcategory-shell::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 42px;
+    height: 100%;
+    background: linear-gradient(to right, rgba(255, 255, 255, 0), #FFFFFF 78%);
+    pointer-events: none;
+    opacity: 0;
+    transition: opacity 0.15s ease;
+  }
+  .lunch-subcategory-shell.has-more::after { opacity: 1; }
+  .lunch-subcategory-nav {
+    display: flex;
+    gap: 6px;
+    overflow-x: auto;
+    padding: 10px 16px 2px;
+    scrollbar-width: none;
+  }
+  .lunch-subcategory-nav::-webkit-scrollbar { display: none; }
+  .lunch-subcategory-nav .cat-btn {
+    padding: 6px 11px;
+    font-size: 11px;
+    font-weight: 600;
+    background: #FFFFFF;
+  }
+  .lunch-subcategory-nav .cat-btn:hover {
+    background: var(--paper);
+  }
+  .lunch-subcategory-nav .cat-btn.active {
+    background: var(--navy);
+    border-color: var(--navy);
+    color: #FFFFFF;
+  }
+
+  /* MENU CONTENT */
+  .menu-content { padding: 16px; }
+  .section-title { font-size: 17px; font-weight: 700; color: var(--navy); margin: 20px 0 4px; }
+  .section-subtitle { font-size: 12px; color: var(--ink-muted); margin-bottom: 12px; }
+  .menu-subsection { margin-top: 24px; }
+  .menu-subsection:first-child { margin-top: 16px; }
+  .menu-subsection-header { margin-bottom: 4px; }
+  .menu-subsection-title {
+    margin: 0;
+    color: var(--navy);
+    font-size: 15px;
+    font-weight: 700;
+  }
+  .menu-subsection-note {
+    margin: 0 0 10px;
+    color: var(--ink-muted);
+    font-size: 11px;
+    line-height: 1.5;
+  }
+
+  .menu-item-card {
+    background: #FFFFFF; border-radius: 10px; border: 1px solid var(--line);
+    padding: 12px; margin-bottom: 10px; box-shadow: var(--shadow-sm);
+    display: flex; gap: 12px; cursor: pointer;
+  }
+  .menu-item-card img {
+    width: 76px; height: 76px; border-radius: 6px; object-fit: cover;
+    background: var(--paper); flex-shrink: 0; border: 1px solid var(--line);
+  }
+  .item-details { flex: 1; display: flex; flex-direction: column; justify-content: space-between; }
+  .item-header { display: flex; justify-content: space-between; align-items: flex-start; gap: 8px; }
+  .item-title { font-size: 13.5px; font-weight: 700; color: var(--navy); margin: 0; line-height: 1.3; }
+  .item-price {
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+    flex-shrink: 0;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 0.01em;
+    color: #1E4E79;
+    background: #DCEBFA;
+    padding: 4px 9px;
+    border-radius: 999px;
+    white-space: nowrap;
+    box-shadow: 0 2px 5px rgba(30, 78, 121, 0.12);
+  }
+  .item-price::before {
+    content: '';
+    width: 5px;
+    height: 5px;
+    border-radius: 50%;
+    background: #C58A4A;
+  }
+  .item-desc { font-size: 11.5px; color: var(--ink-muted); line-height: 1.4; margin: 4px 0 0; }
+
+  /* BRAND FOOTER */
+  footer.brand-footer {
+    background: var(--navy); color: #FFF; padding: 24px 18px;
+    text-align: center; font-size: 12px; line-height: 1.6; border-top: 1px solid var(--navy-light);
+  }
+  footer.brand-footer h4 { color: #FFFFFF; margin: 0 0 8px; font-size: 15px; font-weight: 700; }
+  footer.brand-footer p { margin: 4px 0; color: #94A3B8; }
+
+  /* FLOATING CTA */
+  .floating-bar {
+    position: fixed; bottom: 0; left: 50%; transform: translateX(-50%);
+    width: 100%; max-width: 480px; background: #FFFFFF;
+    border-top: 1px solid var(--line); padding: 10px 16px;
+    display: flex; gap: 10px; z-index: 100; box-shadow: 0 -4px 16px rgba(0,0,0,0.06);
+  }
+  .btn-cta {
+    flex: 1; padding: 12px; border-radius: 8px; border: none;
+    font-weight: 700; font-size: 13px; text-decoration: none; text-align: center;
+  }
+  .btn-cta-primary { background: var(--navy); color: #FFF; }
+  .btn-cta-secondary { background: var(--paper); color: var(--navy); border: 1px solid var(--line); }
+
+  @media (min-width: 768px) {
+    body { background: #E8EEF5; }
+    .app-container {
+      max-width: 480px;
+      margin: 24px auto;
+      min-height: calc(100vh - 48px);
+      border-radius: 18px;
+      overflow: hidden;
+      box-shadow: 0 12px 40px rgba(21, 34, 56, 0.16);
+    }
+    .floating-bar { max-width: 480px; }
+  }
+</style>
+</head>
+<body>
+
+<div class="app-container">
+
+  <div class="top-header-bar">
+    <select class="breadcrumb-select" onchange="if (this.value) window.location.href=this.value;">
+      <option value="https://thetoastedwalnut.com/">Home</option>
+      <option value="https://thetoastedwalnut.com/about/">About</option>
+      <option value="" selected>Menu</option>
+      <option value="https://thetoastedwalnut.com/catering/">Catering</option>
+      <option value="https://thetoastedwalnut.com/shop/">Shop</option>
+      <option value="https://thetoastedwalnut.com/contact/">Contact</option>
+    </select>
+  </div>
+
+  <header class="brand-header">
+    <div class="brand-logo-container">
+      <img src="logo.svg" alt="The Toasted Walnut" class="brand-logo-img">
+    </div>
+    <div class="shop-status" id="shopStatus" aria-live="polite">
+      <span class="shop-status-dot" aria-hidden="true"></span>
+      <span class="shop-status-label">Checking hours...</span>
+    </div>
+  </header>
+
+  <div class="search-sticky">
+    <div class="search-box">
+      🔍 <input type="text" id="searchInput" placeholder="Search menu..." oninput="handleSearch()">
+    </div>
+  </div>
+
+  <nav class="category-nav" id="categoryPills"></nav>
+
+  <div class="mode-toggle-container" id="modeToggle" style="display:none;">
+    <div class="mode-toggle-label">Choose your lunch menu</div>
+    <div class="mode-toggle-options">
+      <button class="mode-btn active" onclick="switchLunchMode('lunch_dine_in', this)">Dine-In Menu</button>
+      <button class="mode-btn" onclick="switchLunchMode('lunch_take_out', this)">Take-Out Menu</button>
+    </div>
+  </div>
+  <div class="lunch-subcategory-shell" id="lunchSubcategoryShell" hidden>
+    <nav class="lunch-subcategory-nav" id="lunchSubcategoryNav" aria-label="Lunch sections"></nav>
+  </div>
+
+  <main class="menu-content" id="menuContainer"></main>
+
+  <footer class="brand-footer">
+    <h4>The Toasted Walnut Cafe & Bakery</h4>
+    <p>📍 7 King St E, Bowmanville, ON L1C 1N1</p>
+    <p>📞 (905) 623-9090</p>
+    <p style="color: #CBD5E1; margin-top: 8px;"><b>Hours:</b> Mon – Sat: 9:00 AM – 3:00 PM | Sun: Closed</p>
+    <p style="opacity: 0.5; font-size: 10px; margin-top: 16px;">© The Toasted Walnut. All rights reserved.</p>
+  </footer>
+
+  <div class="floating-bar">
+    <a href="tel:9056239090" class="btn-cta btn-cta-primary" id="primaryCta">📞 Call to Order</a>
+    <a href="https://maps.google.com/?q=7+King+St+E+Bowmanville" target="_blank" class="btn-cta btn-cta-secondary">🗺️ Directions</a>
+  </div>
+
+</div>
+
+<script>
+  const categoryFallbacks = {
+    breakfast: 'https://images.unsplash.com/photo-1525351484163-7529414344d8?auto=format&fit=crop&w=250&q=80',
+    lunch: 'https://images.unsplash.com/photo-1509722747041-616f39b57569?auto=format&fit=crop&w=250&q=80',
+    bakery: 'https://images.unsplash.com/photo-1586985289688-ca3cf47d3e6e?auto=format&fit=crop&w=250&q=80',
+    beverages: 'https://images.unsplash.com/photo-1541167760496-1628856ab772?auto=format&fit=crop&w=250&q=80',
+    catering: 'https://images.unsplash.com/photo-1555244162-803834f70033?auto=format&fit=crop&w=250&q=80'
+  };
+
+  let database = null;
+  let currentCategoryId = 'all';
+  let activeLunchMode = 'lunch_dine_in';
+  let activeLunchSubcategoryId = 'all';
+  const lunchImageByItem = {
+    'Club House Stack': 'images/lunch/club-house-stack.png',
+    'Roasted Red Pepper': 'images/lunch/roasted-red-pepper-panini.png',
+    'Cranberry and Chicken': 'images/lunch/cranberry-chicken-panini.png',
+    'Gourmet Grilled Cheese': 'images/lunch/gourmet-grilled-cheese.png',
+    'Fig and Apple': 'images/lunch/fig-and-apple-panini.png',
+    'Chicken Salad': 'images/lunch/chicken-salad-sandwich.png',
+    'Cucumber and Cream Cheese': 'images/lunch/cucumber-cream-cheese-sandwich.png',
+    'Egg Salad': 'images/lunch/egg-salad-sandwich.png',
+    'Ham and Cheese': 'images/lunch/ham-and-cheese-sandwich.png',
+    'Loaded Tuna': 'images/lunch/loaded-tuna-sandwich.png',
+    'BLT': 'images/lunch/blt-sandwich.png',
+    'Chicken Caesar': 'images/lunch/chicken-caesar-wrap.png',
+    'Chipotle Chicken': 'images/lunch/chipotle-chicken-wrap.png',
+    'Cranberry Chicken Salad': 'images/lunch/cranberry-chicken-salad-wrap.png',
+    'Maple Chicken': 'images/lunch/maple-chicken-wrap.png',
+    'Veggie Lovers (vegetarian)': 'images/lunch/veggie-lovers-wrap.png',
+    'Veggie Lovers Wrap (vegetarian)': 'images/lunch/veggie-lovers-wrap.png',
+    'Mango Curry Butternut Squash': 'images/lunch/mango-curry-butternut-squash-soup.png',
+    'Soup of the Day': 'images/lunch/soup-of-the-day.png',
+    'Soup and 1/2 Sandwich': 'images/lunch/soup-half-sandwich.png',
+    'Soup, Salad, Scone': 'images/lunch/soup-salad-scone.png',
+    'Crustless Quiche, Salad and Scone': 'images/lunch/quiche-salad-scone.png',
+    'Crustless Quiche, Soup and Scone': 'images/lunch/quiche-soup-scone.png',
+    'Afternoon Tea for Two': 'images/lunch/afternoon-tea.png',
+    'Afternoon Tea Box for Two': 'images/lunch/afternoon-tea-box.png',
+    'Beet and Goat Cheese': 'images/lunch/beet-goat-cheese-salad.png',
+    'Grilled Chicken Caesar': 'images/lunch/grilled-chicken-caesar-salad.png',
+    'Garden': 'images/lunch/garden-salad.png',
+    'The Toasted Walnut Signature': 'images/lunch/toasted-walnut-signature-salad.png'
+  };
+
+  async function initApp() {
+    try {
+      const response = await fetch('./toasted-walnut-menu-database.json');
+      if (!response.ok) throw new Error("Failed to fetch JSON file");
+      database = await response.json();
+      renderCategoryPills();
+      renderLunchSubcategoryNav();
+      updatePrimaryCta();
+      renderMenu();
+    } catch (err) {
+      console.error('Error loading JSON:', err);
+    }
+  }
+
+  function renderCategoryPills() {
+    const nav = document.getElementById('categoryPills');
+    let html = `
+      <button class="category-menu-toggle" type="button" aria-expanded="false" aria-controls="categoryDropdown" onclick="toggleCategoryMenu()">
+        <span class="hamburger-icon" aria-hidden="true"><span></span><span></span><span></span></span>
+      </button>
+      <div class="category-dropdown" id="categoryDropdown" hidden>
+      </div>
+      <div class="category-pill-list">
+    `;
+
+    database.categories.forEach(cat => {
+      if (cat.id === 'lunch_take_out') return;
+      const label = cat.id === 'lunch_dine_in' ? 'Lunch' : cat.name;
+      html += `
+        <button class="cat-btn" onclick="selectCategory('${cat.id}', this)">${label}</button>
+      `;
+    });
+
+    html += '</div>';
+    nav.innerHTML = html;
+
+    const dropdown = document.getElementById('categoryDropdown');
+    database.categories.forEach(cat => {
+      if (cat.id === 'lunch_take_out') return;
+      const label = cat.id === 'lunch_dine_in' ? 'Lunch' : cat.name;
+      dropdown.insertAdjacentHTML('beforeend', `<button class="category-option" onclick="selectCategory('${cat.id}', this)">${label}</button>`);
+    });
+  }
+
+  function toggleCategoryMenu() {
+    const menu = document.getElementById('categoryDropdown');
+    const toggle = document.querySelector('.category-menu-toggle');
+    menu.hidden = !menu.hidden;
+    toggle.setAttribute('aria-expanded', String(!menu.hidden));
+  }
+
+  function selectCategory(catId, btn) {
+    document.querySelectorAll('.cat-btn, .category-option').forEach(b => b.classList.remove('active'));
+    document.querySelectorAll(`[onclick*="selectCategory('${catId}'"]`).forEach(b => b.classList.add('active'));
+    currentCategoryId = catId;
+    activeLunchSubcategoryId = 'all';
+    updatePrimaryCta();
+    document.getElementById('categoryDropdown').hidden = true;
+    document.querySelector('.category-menu-toggle').setAttribute('aria-expanded', 'false');
+
+    const toggle = document.getElementById('modeToggle');
+    toggle.style.display = (catId === 'lunch_dine_in' || catId === 'lunch_take_out') ? 'flex' : 'none';
+    renderLunchSubcategoryNav();
+
+    renderMenu();
+  }
+
+  function updatePrimaryCta() {
+    const cta = document.getElementById('primaryCta');
+    const isOrderOnlineCategory = currentCategoryId === 'bakery' || currentCategoryId === 'catering';
+
+    if (isOrderOnlineCategory) {
+      cta.href = 'https://thetoastedwalnut.com/shop/';
+      cta.textContent = '🛒 Order Online';
+    } else {
+      cta.href = 'tel:9056239090';
+      cta.textContent = '📞 Call to Order';
+    }
+  }
+
+  function switchLunchMode(mode, btn) {
+    document.querySelectorAll('.mode-btn').forEach(b => b.classList.remove('active'));
+    btn.classList.add('active');
+    activeLunchMode = mode;
+    activeLunchSubcategoryId = 'all';
+    renderLunchSubcategoryNav();
+    renderMenu();
+  }
+
+  function getActiveLunchCategory() {
+    return database.categories.find(cat => cat.id === activeLunchMode);
+  }
+
+  function renderLunchSubcategoryNav() {
+    const nav = document.getElementById('lunchSubcategoryNav');
+    const shell = document.getElementById('lunchSubcategoryShell');
+    const isLunch = currentCategoryId === 'lunch_dine_in' || currentCategoryId === 'lunch_take_out';
+    const category = getActiveLunchCategory();
+    if (!isLunch || !category || !category.subcategories) {
+      shell.hidden = true;
+      nav.innerHTML = '';
+      return;
+    }
+
+    shell.hidden = false;
+    nav.innerHTML = `
+      <button class="cat-btn ${activeLunchSubcategoryId === 'all' ? 'active' : ''}" type="button" onclick="selectLunchSubcategory('all', this)">All Lunch</button>
+      ${category.subcategories.map(sub => `
+        <button class="cat-btn ${activeLunchSubcategoryId === sub.id ? 'active' : ''}" type="button" onclick="selectLunchSubcategory('${sub.id}', this)">${sub.name}</button>
+      `).join('')}
+    `;
+    nav.onscroll = updateLunchSubcategoryOverflow;
+    updateLunchSubcategoryOverflow();
+  }
+
+  function updateLunchSubcategoryOverflow() {
+    const nav = document.getElementById('lunchSubcategoryNav');
+    const shell = document.getElementById('lunchSubcategoryShell');
+    const hasMore = nav.scrollLeft + nav.clientWidth < nav.scrollWidth - 1;
+    shell.classList.toggle('has-more', hasMore);
+  }
+
+  function selectLunchSubcategory(sectionId) {
+    activeLunchSubcategoryId = sectionId;
+    renderLunchSubcategoryNav();
+    renderMenu();
+  }
+
+  function renderMenu() {
+    const container = document.getElementById('menuContainer');
+    const searchVal = document.getElementById('searchInput').value.toLowerCase();
+    let html = '';
+
+    database.categories.forEach(cat => {
+      if (currentCategoryId !== 'all') {
+        if (currentCategoryId === 'lunch_dine_in' && cat.id !== activeLunchMode) return;
+        if (currentCategoryId !== 'lunch_dine_in' && cat.id !== currentCategoryId) return;
+      }
+
+      const isLunchMenu = cat.id === 'lunch_dine_in' || cat.id === 'lunch_take_out';
+      if (!isLunchMenu) {
+        html += `<div class="section-title">${cat.name}</div>`;
+        if (cat.subtitle) html += `<div class="section-subtitle">${cat.subtitle}</div>`;
+      }
+
+      const renderItems = (items, categoryPrice) => {
+        items.forEach(item => {
+          const price = item.price ?? categoryPrice ?? cat.price;
+          const priceDisplay = price ? `$${price.toFixed(2)}` : (item.price_range ? `$${item.price_range[0].toFixed(2)} - $${item.price_range[1].toFixed(2)}` : '');
+          const image = lunchImageByItem[item.name] || ((item.image_url && !item.needs_photo) ? item.image_url : getFallbackImage(cat.id));
+
+          html += `
+            <div class="menu-item-card">
+              <img src="${image}" alt="${item.name}">
+              <div class="item-details">
+                <div>
+                  <div class="item-header">
+                    <h3 class="item-title">${item.name}</h3>
+                    ${priceDisplay ? `<span class="item-price">${priceDisplay}</span>` : ''}
+                  </div>
+                  <p class="item-desc">${item.description || 'Freshly prepared in-house daily.'}</p>
+                </div>
+              </div>
+            </div>
+          `;
+        });
+      };
+
+      if (cat.subcategories) {
+        cat.subcategories.forEach(sub => {
+          if (activeLunchSubcategoryId !== 'all' && sub.id !== activeLunchSubcategoryId) return;
+          const items = searchVal
+            ? sub.items.filter(item =>
+                item.name.toLowerCase().includes(searchVal) ||
+                (item.description && item.description.toLowerCase().includes(searchVal))
+              )
+            : sub.items;
+          if (items.length === 0) return;
+
+          html += `
+            <section class="menu-subsection" id="lunch-section-${sub.id}">
+              <div class="menu-subsection-header">
+                <h3 class="menu-subsection-title">${sub.name}</h3>
+              </div>
+              ${sub.note ? `<p class="menu-subsection-note">${sub.note}</p>` : ''}
+          `;
+          renderItems(items, sub.price);
+          html += '</section>';
+        });
+      } else {
+        const items = searchVal
+          ? cat.items.filter(item =>
+              item.name.toLowerCase().includes(searchVal) ||
+              (item.description && item.description.toLowerCase().includes(searchVal))
+            )
+          : cat.items;
+        if (items.length === 0) return;
+        renderItems(items, cat.price);
+      }
+    });
+
+    container.innerHTML = html || `<p style="text-align:center; padding:30px; color:var(--ink-muted);">No menu items found.</p>`;
+  }
+
+  function getFallbackImage(catId) {
+    if (catId.includes('breakfast')) return categoryFallbacks.breakfast;
+    if (catId.includes('lunch')) return categoryFallbacks.lunch;
+    if (catId.includes('bakery')) return categoryFallbacks.bakery;
+    if (catId.includes('beverage')) return categoryFallbacks.beverages;
+    return categoryFallbacks.catering;
+  }
+
+  function handleSearch() { renderMenu(); }
+
+  function updateShopStatus() {
+    const status = document.getElementById('shopStatus');
+    const label = status.querySelector('.shop-status-label');
+    const parts = new Intl.DateTimeFormat('en-US', {
+      timeZone: 'America/Toronto',
+      weekday: 'short',
+      hour: 'numeric',
+      minute: 'numeric',
+      hour12: false
+    }).formatToParts(new Date());
+    const values = Object.fromEntries(parts.map(part => [part.type, part.value]));
+    const currentMinutes = Number(values.hour === '24' ? 0 : values.hour) * 60 + Number(values.minute);
+    const isOpenDay = ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'].includes(values.weekday);
+    const isOpen = isOpenDay && currentMinutes >= 9 * 60 && currentMinutes < 15 * 60;
+
+    status.classList.toggle('is-closed', !isOpen);
+    label.textContent = isOpen ? 'Open now · Closes at 3:00 PM' : 'Closed now · Opens at 9:00 AM';
+    if (!isOpenDay) label.textContent = 'Closed now · Opens Monday at 9:00 AM';
+  }
+
+  updateShopStatus();
+  setInterval(updateShopStatus, 60000);
+  window.onload = initApp;
+</script>
+</body>
+</html>
