@@ -1,0 +1,176 @@
+{
+  "business": {
+    "name": "Roam Coffee",
+    "tagline": "Crafting Community Around a Cup",
+    "story": "Roam Coffee started as a dream over six years ago in Central Coast California. Now serving the Durham Region, we strive to bring the excellence and culture of Californian third-wave coffee to our beautiful Ontario home. We are dedicated to coffee quality and sustainability, partnering with some of the best Canadian roasters and producers to bring you a local and environmentally-conscious cup.",
+    "address": "62 King St. West, Bowmanville, ON L1C 1R4",
+    "location_note": "Located inside Markets Ontario, shares space with Nest Specialty Desserts.",
+    "hours": {
+      "mon_fri": "7:30a - 5p",
+      "sat": "8:30a - 5p",
+      "sun": "8:30a - 4p",
+      "source": "roamcoffee.ca (Home + Find Us pages)",
+      "note": "Google Business Profile lists slightly different hours (Mon closed, Tue-Sat 8:30a-5p, Sun 10a-3p per one listing; Markets Ontario page lists Mon-Thu 7:30a-5p, Fri 7:30a-7p, Sat 8:30a-7p, Sun 8:30a-5p). Hours conflict across sources -- confirm actual current hours with client before publishing."
+    },
+    "social": {
+      "instagram": "http://instagram.com/roamcoffee.ca",
+      "facebook": "http://www.facebook.com/roamcoffee.ca",
+      "email": "hello@roamcoffee.ca"
+    },
+    "rating": {
+      "google_rating": 4.6,
+      "google_review_count": 272,
+      "source": "Google Business Profile, pulled Aug 2026"
+    }
+  },
+
+  "content_gaps": [
+    "Website 'Menu' page lists Espresso, Macchiato, Cortado, Cappuccino, Latte, Brew, Americano, Cold Brew -- but the current in-store chalkboard menu (Google Photos, recent) shows Americano, Cappuccino, Chai, Latte, Hot Chocolate, Cold Brew, Tonic, Seasonal Latte, Seasonal Soda. No Macchiato, Cortado, Espresso-as-a-drink, or Brew on the current board. The website may be advertising discontinued items and missing current ones (Chai Latte, Tonic).",
+    "No prices published anywhere on the website's core 'Menu' page (Coffee/Tea/Steamers) -- confirmed absent across the site itself and every third-party directory checked (Yelp, Restaurant Guru, Restaurantji).",
+    "Pricing that DOES exist publicly is scattered across three disconnected, uneven sources: the Summer Menu page (image carousel, seasonal only), Google Photos (a customer-shot chalkboard photo and an owner/customer-shot seasonal paper menu), none of which are structured or guaranteed current.",
+    "Site is not mobile-responsive: fixed desktop layout, tiny nav, no sticky/jump navigation, image-only Summer Menu page inaccessible to screen readers and unreadable to search engines.",
+    "Hours are inconsistent across the website, Google Business Profile, and the Markets Ontario site -- needs client confirmation."
+  ],
+
+  "images": {
+    "note": "Only official Roam-owned, Squarespace-hosted images are included below as production-ready. Google Business Profile photos were reviewed for design inspiration (interior styling, latte art, plating) but are NOT included here as image sources -- most are customer-submitted, not Roam's own content, and Google's hosted URLs are session-scoped and can break. Before final build, ask the client directly for her own high-res originals (especially the espresso-bar/counter shot and the chalkboard/menu-board shot found on GBP) rather than hotlinking.",
+    "hero_candidates": [
+      { "url": "https://images.squarespace-cdn.com/content/v1/5f1863e316cde40585b0cbf0/1653689509904-B6XNWYIQNK1JA0AT2OPK/IMG_6637.jpg", "context": "Home hero -- 'Crafting Community Around a Cup'" },
+      { "url": "https://images.squarespace-cdn.com/content/v1/5f1863e316cde40585b0cbf0/1653664520760-SRU4XPLLABC3UENR4DOY/IMG_8068.jpg", "context": "About Us hero -- 'Our Story'" },
+      { "url": "https://images.squarespace-cdn.com/content/v1/5f1863e316cde40585b0cbf0/d45a35a5-37a6-48cd-adfc-8c83788eb88a/DSC05918.jpg", "context": "Summer Menu hero" }
+    ],
+    "logo": "https://images.squarespace-cdn.com/content/v1/5f1863e316cde40585b0cbf0/a0f45d71-bd43-41e5-aa0a-72414e431f2d/RoamFullLogo-Colour-Transparent.png",
+    "menu_item_photos": {
+      "note": "Mapped 1:1 to menu_classic items below by array order within each category.",
+      "coffee": [
+        "https://images.squarespace-cdn.com/content/v1/5f1863e316cde40585b0cbf0/1622755024228-GZUVRJDLVDFDM896YJ9F/IMG_5399.jpg",
+        "https://images.squarespace-cdn.com/content/v1/5f1863e316cde40585b0cbf0/1622830683721-TM5SG9LKAV3ABLDN25HN/IMG_5411.jpg",
+        "https://images.squarespace-cdn.com/content/v1/5f1863e316cde40585b0cbf0/1622830609875-ZJ2NEHWM46I1X6N68EQ0/IMG_5446.jpg",
+        "https://images.squarespace-cdn.com/content/v1/5f1863e316cde40585b0cbf0/1622830824206-AVSCKN51QW0I9IEXGBUJ/IMG_5506.jpg",
+        "https://images.squarespace-cdn.com/content/v1/5f1863e316cde40585b0cbf0/1622830986584-K8JYC7VA1068AXU4QXXY/IMG_5521.jpg",
+        "https://images.squarespace-cdn.com/content/v1/5f1863e316cde40585b0cbf0/1631017938500-6AI5UOVB5HR0QHH4MRQ2/IMG_5472.jpg",
+        "https://images.squarespace-cdn.com/content/v1/5f1863e316cde40585b0cbf0/1622831549978-8PHH0NV1750B3XNSL8DY/IMG_5457.jpg",
+        "https://images.squarespace-cdn.com/content/v1/5f1863e316cde40585b0cbf0/1622831648418-RVJIGJYKBLS0WYMK1XGB/IMG_5898.jpg"
+      ],
+      "tea": [
+        "https://images.squarespace-cdn.com/content/v1/5f1863e316cde40585b0cbf0/1622756708386-O3ARALRUB5GC3575WANE/IMG_5805.jpg",
+        "https://images.squarespace-cdn.com/content/v1/5f1863e316cde40585b0cbf0/1622757241785-CU9BKU1KUBFH8AY4LX4S/IMG_5890.jpg",
+        "https://images.squarespace-cdn.com/content/v1/5f1863e316cde40585b0cbf0/1622756823546-5BY8Q2HWCV0GSWL74WFP/IMG_5887.jpg",
+        "https://images.squarespace-cdn.com/content/v1/5f1863e316cde40585b0cbf0/1622757315329-V51X5B5AERWLO1AMW0MD/IMG_5852.jpg",
+        "https://images.squarespace-cdn.com/content/v1/5f1863e316cde40585b0cbf0/1622757501909-2ES9K2PIQNRYJJ5GIQ36/IMG_5817.jpg"
+      ],
+      "steamers": [
+        "https://images.squarespace-cdn.com/content/v1/5f1863e316cde40585b0cbf0/9601efe2-6662-4129-97ca-e9a5a626e25c/IMG_6372.jpg"
+      ]
+    },
+    "design_reference_only_do_not_hotlink": [
+      { "description": "In-store espresso bar / counter with hanging rattan pendant lights -- great interior styling reference", "source": "Google Business Profile, customer photo" },
+      { "description": "Current chalkboard price board", "source": "Google Business Profile, customer photo -- used for pricing data only, see menu_classic sources" },
+      { "description": "Latte art close-up, marble/wood table styling", "source": "Google Business Profile, customer photo" }
+    ]
+  },
+
+  "menu_classic": {
+    "source": "roamcoffee.ca/menu (text + descriptions) cross-referenced with in-store chalkboard photo, Google Business Profile, dated within last few months",
+    "note": "Prices below are cross-referenced from the chalkboard photo where the item name matched. Items with no price found anywhere are marked null -- do not guess.",
+    "categories": [
+      {
+        "category": "Coffee",
+        "items": [
+          { "name": "Espresso", "size": "2oz", "description": "double shot of espresso", "price": null, "price_source": "not_found", "on_current_board": false },
+          { "name": "Macchiato", "size": "3oz", "description": "espresso and steamed milk", "price": null, "price_source": "not_found", "on_current_board": false },
+          { "name": "Cortado", "size": "4.5oz", "description": "espresso and steamed milk", "price": null, "price_source": "not_found", "on_current_board": false },
+          { "name": "Cappuccino", "size": "8oz", "description": "espresso and steamed milk", "price": 5.25, "price_source": "in-store chalkboard photo (Google Business Profile)", "on_current_board": true },
+          { "name": "Latte", "size": "12oz", "description": "espresso and steamed milk", "price": 6.00, "price_source": "in-store chalkboard photo (Google Business Profile)", "on_current_board": true },
+          { "name": "Brew", "size": "8oz / 12oz", "description": "a classic cup of drip coffee", "price": null, "price_source": "not_found", "on_current_board": false },
+          { "name": "Americano", "size": "12oz", "description": "espresso and hot water", "price": 4.50, "price_source": "in-store chalkboard photo (Google Business Profile)", "on_current_board": true },
+          { "name": "Cold Brew", "size": "12oz", "description": "cold brew and ice", "price": null, "price_source": "on board but price not legibly captured in photo -- confirm with client", "on_current_board": true }
+        ]
+      },
+      {
+        "category": "Tea",
+        "items": [
+          { "name": "Loose Leaf Tea", "size": "12oz", "description": "tea and hot water", "price": null, "price_source": "not_found", "on_current_board": false },
+          { "name": "London Fog", "size": "12oz", "description": "earl grey tea, house-made vanilla syrup, hot water and steamed milk", "price": null, "price_source": "not_found", "on_current_board": false },
+          { "name": "Comfort Cup", "size": "12oz", "description": "Ctrl+Alt+Dlt tea, local honey, hot water and steamed oat milk", "price": null, "price_source": "not_found", "on_current_board": false },
+          { "name": "Matcha Latte", "size": "12oz", "description": "matcha, hot water and steamed milk", "price": null, "price_source": "not_found -- board shows a general 'Matcha' at $6 but unclear if same item", "on_current_board": true },
+          { "name": "Chai Latte", "size": "12oz", "description": "chai tea and steamed milk topped with chai spice", "price": 6.00, "price_source": "in-store chalkboard photo, listed as 'Chai'", "on_current_board": true }
+        ]
+      },
+      {
+        "category": "Steamers",
+        "items": [
+          { "name": "Hot Chocolate", "size": "12oz", "description": "house-made chocolate sauce, steamed milk and whipped cream or vegan marshmallows", "price": null, "price_source": "on board but digits not clearly legible in photo (approx $5.25-5.75) -- confirm with client", "on_current_board": true }
+        ]
+      }
+    ],
+    "current_board_extras_not_on_website": [
+      { "name": "Tonic", "price": 7.00, "note": "espresso tonic, not listed anywhere on current website menu" },
+      { "name": "Seasonal Latte", "price": "MKT (market price, varies)" },
+      { "name": "Seasonal Soda", "price": 5.25 }
+    ],
+    "add_ons": {
+      "extra_espresso_shot": 1.50,
+      "alt_milk": "size/type dependent -- board shows '+Alt Milk', printed seasonal menu shows Oat/Almond/Soy/Coconut at .50/1.00 and Lactose Free at .25/.50",
+      "flavor_syrup": "printed seasonal menu shows Vanilla/Chocolate/Lavender/Salted Caramel at .75/1.00 -- likely standard year-round add-on pricing, confirm with client"
+    }
+  },
+
+  "menu_bakery": {
+    "source": "in-store chalkboard photo (Google Business Profile) -- item names only, no prices visible in this photo",
+    "note": "This category does not exist on the website at all -- website has zero bakery/food page or section despite Google review consensus that baked goods are a major draw.",
+    "items": [
+      "Seasonal Shortbread", "Assorted PB&J Cookies", "Jumbo Cookie", "Assorted Scones",
+      "Baby's (mini item, name unclear from photo)", "Muffin", "Mini Loaf", "Mini Pies",
+      "Small Tarts", "Squares & Bars", "Mini Bundt Cake"
+    ]
+  },
+
+  "menu_summer_seasonal": {
+    "source": "roamcoffee.ca/summer/menu, live carousel, screenshotted and read directly (page is JS-rendered image carousel, not extractable via text fetch)",
+    "note": "Fully priced and current as of extraction. This is the only page on the entire site with complete pricing.",
+    "items": [
+      { "name": "Banana Cream Latte", "price": 8.75 },
+      { "name": "Banana Bread Latte", "price": 7.50 },
+      { "name": "Honeyed Orange Creamsicle Latte", "price": 7.75 },
+      { "name": "Roam Palmer", "price": 6.75 },
+      { "name": "Chocobrew", "price": 7.50 },
+      { "name": "Banana Cream - Matcha or Chai", "price": "8.75 / 8.25" },
+      { "name": "Honeyed Orange Dream Chai", "price": 7.25 },
+      { "name": "Hojicha Latte - Vanilla or Chocolate", "price": 6.00 },
+      { "name": "Moroccan Mint Matcha", "price": 6.00 },
+      { "name": "Iced Tea - Moroccan Mint or Orange Pekoe", "price": 4.50 },
+      { "name": "Lemonade", "price": 7.50 },
+      { "name": "Sparkling Mango Lemonade", "price": 7.50 },
+      { "name": "Banana Cream Soda", "price": 5.25 },
+      { "name": "Citrus Honey Soda", "price": 5.25 }
+    ]
+  },
+
+  "menu_fall_seasonal_reference_only": {
+    "source": "customer-uploaded printed menu photo, Google Business Profile, dated ~10 months prior to extraction (likely Fall 2025)",
+    "note": "NOT current -- included only as reference for add-on pricing structure and general price banding. Do not present as active menu.",
+    "categories": [
+      { "category": "Coffee", "items": [
+        { "name": "Sticky Toffee Pudding Latte", "price": 7.50 },
+        { "name": "Banana Bread Latte", "price": 7.50 }
+      ]},
+      { "category": "Chai, Matcha, Tea", "items": [
+        { "name": "Sticky Toffee Pudding Chai", "price": 7.50 },
+        { "name": "Banana Bread Chai", "price": 7.50 },
+        { "name": "Banana Bread Matcha", "price": 7.50 },
+        { "name": "Banana Dream Matcha", "price": 8.50 },
+        { "name": "Spiced Apple Cider Dream Chai", "price": 8.50 },
+        { "name": "Spiced Apple Cider Dream Matcha", "price": 8.50 },
+        { "name": "Apple Pie Chai", "price": 5.25 }
+      ]},
+      { "category": "Not Coffee Not Tea", "items": [
+        { "name": "Lavender Lime Soda", "price": 5.25 },
+        { "name": "Banana Cream Soda", "price": 5.25 },
+        { "name": "Sparkling Spiced Apple Cider", "price": 5.25 },
+        { "name": "Hot Apple Cider", "price": "4.75 / 5.25" },
+        { "name": "Banana Bread Hot Chocolate", "price": "5.00 / 5.75" }
+      ]}
+    ]
+  }
+}
