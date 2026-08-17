@@ -148,12 +148,12 @@
         </nav>
     </header>
 
-    <div class="h-[76px] md:h-24" aria-hidden="true"></div>
+    <div class="h-16 md:h-24" aria-hidden="true"></div>
 
     <main class="w-full overflow-hidden">
 
         <section class="relative min-h-[85vh] md:min-h-[90vh] flex items-end pt-20 pb-12 px-4 md:px-8">
-            <div id="hero-carousel" class="absolute inset-0 z-0">
+            <div id="hero-carousel" class="absolute inset-0 z-0" aria-roledescription="carousel">
                 <div data-hero-slide="0" class="hero-slide absolute inset-0 opacity-100">
                     <img src="https://images.squarespace-cdn.com/content/v1/5f1863e316cde40585b0cbf0/1653689509904-B6XNWYIQNK1JA0AT2OPK/IMG_6637.jpg" alt="Roam Coffee Barista and Atmosphere" class="w-full h-full object-cover object-center transform scale-105 animate-pulse-subtle duration-[10000ms]">
                     <div class="absolute inset-0 bg-gradient-to-t from-espresso/90 via-espresso/40 to-espresso/20"></div>
@@ -209,9 +209,6 @@
                 </div>
             </div>
 
-            <button id="hero-next" type="button" aria-label="View Roam's story" onclick="nextHeroSlide()" class="absolute right-4 md:right-8 top-1/2 -translate-y-1/2 z-20 w-11 h-11 rounded-full bg-white/15 hover:bg-white/25 backdrop-blur-md border border-white/30 text-ivory flex items-center justify-center transition-all">
-                <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"></path></svg>
-            </button>
         </section>
 
         <section id="menu" class="scroll-mt-20 py-12 md:py-20 px-4 md:px-8 max-w-6xl mx-auto">
@@ -1029,12 +1026,11 @@
 
     <script>
         let activeHeroSlide = 0;
+        let heroSwipeStartX = 0;
 
         function setHeroSlide(slideIndex) {
             const slides = document.querySelectorAll('[data-hero-slide]');
             const copies = document.querySelectorAll('[data-hero-copy]');
-            const nextButton = document.getElementById('hero-next');
-
             slides.forEach((slide, index) => {
                 const isActive = index === slideIndex;
                 slide.classList.toggle('opacity-100', isActive);
@@ -1049,13 +1045,29 @@
                 copy.classList.toggle('opacity-0', !isActive);
             });
 
-            nextButton.setAttribute('aria-label', slideIndex === 0 ? "View Roam's story" : 'Return to Roam Coffee home');
         }
 
         function nextHeroSlide() {
             activeHeroSlide = activeHeroSlide === 0 ? 1 : 0;
             setHeroSlide(activeHeroSlide);
         }
+
+        document.addEventListener('DOMContentLoaded', () => {
+            const carousel = document.getElementById('hero-carousel');
+
+            carousel.addEventListener('touchstart', (event) => {
+                heroSwipeStartX = event.touches[0].clientX;
+            }, { passive: true });
+
+            carousel.addEventListener('touchend', (event) => {
+                const swipeDistance = event.changedTouches[0].clientX - heroSwipeStartX;
+                if (Math.abs(swipeDistance) >= 40) {
+                    nextHeroSlide();
+                }
+            }, { passive: true });
+
+            window.setInterval(nextHeroSlide, 5000);
+        });
 
         function parseBusinessTime(timeLabel) {
             const match = timeLabel.match(/(\d+)(?::(\d+))?([ap])/i);
