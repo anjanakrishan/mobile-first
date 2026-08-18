@@ -19,16 +19,16 @@
       "source": "Breakfast-Menu-Dine-In-March-2026.pdf",
       "subcategories": null,
       "items": [
-        {"name": "Traditional Breakfast", "price": 14.75, "description": "Two fried or scrambled eggs, four slices of bacon. Served with your choice of scone or toast and strawberry jam. Garnished with fresh fruit. Add one egg $1.00.", "image_url": "images/breakfast/traditional-breakfast.png"},
-        {"name": "Omelette", "price": 15.95, "description": "Three eggs, red bell pepper, spinach and feta cheese. Served with your choice of scone or toast and strawberry jam. Garnished with fresh fruit. Add grilled ham or a side of bacon $3.95.", "image_url": "images/breakfast/omelette.png"},
-        {"name": "Bacon, Egg and Cheese Bagel", "price": 11.95, "description": "Bacon, cheddar cheese and a fried egg on your choice of a plain or everything bagel. Garnished with fresh fruit.", "image_url": "images/breakfast/bacon-egg-cheese-bagel.png"},
-        {"name": "Breakfast Club Bagel", "price": 13.25, "description": "Bacon, smoked gouda cheese, fried egg, tomato, lettuce and mayonnaise on your choice of a plain or everything bagel. Garnished with fresh fruit.", "image_url": "images/breakfast/breakfast-club-bagel.png"},
-        {"name": "Western Sandwich", "price": 13.25, "description": "Two eggs, applewood smoked ham, onion, bell pepper, cheddar and mozzarella cheese on toasted multigrain bread. Garnished with fresh fruit.", "image_url": "images/breakfast/western-sandwich.png"},
-        {"name": "BLT", "price": 12.75, "description": "Bacon, lettuce, tomato and mayonnaise served on toasted marble rye bread. Garnished with fresh fruit.", "image_url": "images/breakfast/blt.png"},
-        {"name": "Crustless Quiche", "price": 13.75, "description": "Our homemade quiche of the day and your choice of scone (blueberry, cranberry or herb and cheddar) with jam. Garnished with fresh fruit.", "image_url": "images/breakfast/crustless-quiche.png"},
-        {"name": "Fruit Parfait", "price": 11.50, "description": "Vanilla Greek yogurt and The Toasted Walnut house made granola topped with fresh fruit and a drizzle of real maple syrup. Add a scone (blueberry, cranberry or herb and cheddar) with strawberry jam $3.95.", "image_url": "images/breakfast/fruit-parfait.png"},
-        {"name": "Avocado Toast", "price": 15.95, "description": "Toasted marble rye bread topped with smashed avocado, tomato, two over easy eggs, feta, balsamic glaze and sprouts. Garnished with fresh fruit. *Seasonal*", "image_url": "images/breakfast/avocado-toast.png"},
-        {"name": "Breakfast Wrap", "price": 13.95, "description": "Three eggs, bacon, spinach, red pepper, cheddar and mozzarella cheese served on a grilled whole wheat wrap with a side of sour cream. Garnished with fresh fruit. *New*", "image_url": "images/breakfast/breakfast-wrap.png"}
+        {"name": "Traditional Breakfast", "price": 14.75, "description": "Two fried or scrambled eggs, four slices of bacon. Served with your choice of scone or toast and strawberry jam. Garnished with fresh fruit. Add one egg $1.00.", "image_url": "images/breakfast_webp/traditional-breakfast.webp"},
+        {"name": "Omelette", "price": 15.95, "description": "Three eggs, red bell pepper, spinach and feta cheese. Served with your choice of scone or toast and strawberry jam. Garnished with fresh fruit. Add grilled ham or a side of bacon $3.95.", "image_url": "images/breakfast_webp/omelette.webp"},
+        {"name": "Bacon, Egg and Cheese Bagel", "price": 11.95, "description": "Bacon, cheddar cheese and a fried egg on your choice of a plain or everything bagel. Garnished with fresh fruit.", "image_url": "images/breakfast_webp/bacon-egg-cheese-bagel.webp"},
+        {"name": "Breakfast Club Bagel", "price": 13.25, "description": "Bacon, smoked gouda cheese, fried egg, tomato, lettuce and mayonnaise on your choice of a plain or everything bagel. Garnished with fresh fruit.", "image_url": "images/breakfast_webp/breakfast-club-bagel.webp"},
+        {"name": "Western Sandwich", "price": 13.25, "description": "Two eggs, applewood smoked ham, onion, bell pepper, cheddar and mozzarella cheese on toasted multigrain bread. Garnished with fresh fruit.", "image_url": "images/breakfast_webp/western-sandwich.webp"},
+        {"name": "BLT", "price": 12.75, "description": "Bacon, lettuce, tomato and mayonnaise served on toasted marble rye bread. Garnished with fresh fruit.", "image_url": "images/breakfast_webp/blt.webp"},
+        {"name": "Crustless Quiche", "price": 13.75, "description": "Our homemade quiche of the day and your choice of scone (blueberry, cranberry or herb and cheddar) with jam. Garnished with fresh fruit.", "image_url": "images/breakfast_webp/crustless-quiche.webp"},
+        {"name": "Fruit Parfait", "price": 11.50, "description": "Vanilla Greek yogurt and The Toasted Walnut house made granola topped with fresh fruit and a drizzle of real maple syrup. Add a scone (blueberry, cranberry or herb and cheddar) with strawberry jam $3.95.", "image_url": "images/breakfast_webp/fruit-parfait.webp"},
+        {"name": "Avocado Toast", "price": 15.95, "description": "Toasted marble rye bread topped with smashed avocado, tomato, two over easy eggs, feta, balsamic glaze and sprouts. Garnished with fresh fruit. *Seasonal*", "image_url": "images/breakfast_webp/avocado-toast.webp"},
+        {"name": "Breakfast Wrap", "price": 13.95, "description": "Three eggs, bacon, spinach, red pepper, cheddar and mozzarella cheese served on a grilled whole wheat wrap with a side of sour cream. Garnished with fresh fruit. *New*", "image_url": "images/breakfast_webp/breakfast-wrap.webp"}
       ]
     },
     {
@@ -38,31 +38,31 @@
       "source": "Breakfast-Menu-Dine-In-March-2026.pdf",
       "subcategories": null,
       "items": [
-        {"name": "Drip Coffee", "price": 3.50, "description": null, "image_url": "images/beverages/drip-coffee.png"},
-        {"name": "Espresso (single)", "price": 3.00, "description": null, "image_url": "images/beverages/espresso.png"},
-        {"name": "Espresso (double)", "price": 3.75, "description": null, "image_url": "images/beverages/espresso.png"},
-        {"name": "Americano", "price": 3.95, "description": null, "image_url": "images/beverages/americano.png"},
-        {"name": "Cappuccino", "price": 4.95, "description": null, "image_url": "images/beverages/cappuccino.png"},
-        {"name": "Flat White", "price": 5.95, "description": null, "image_url": "images/beverages/flat-white.png"},
-        {"name": "Latte", "price": 5.95, "description": null, "image_url": "images/beverages/latte.png"},
-        {"name": "Chai Tea Latte", "price": 5.95, "description": null, "image_url": "images/beverages/chai-tea-latte.png"},
-        {"name": "London Fog", "price": 5.95, "description": null, "image_url": "images/beverages/london-fog.png"},
-        {"name": "Tea", "price": 3.50, "description": "Orange Pekoe, Earl Grey, Jasmine Green, Spiced Chai, Raspberry.", "image_url": "images/beverages/tea.png"},
-        {"name": "Herbal Tea", "price": 3.95, "description": "Cranberry Apple, Cinnamon Apple, Chamomile, Lemon, Peppermint.", "image_url": "images/beverages/tea.png"},
-        {"name": "Mocha", "price": 5.95, "description": null, "image_url": "images/beverages/mocha.png"},
-        {"name": "Hot Chocolate", "price": 4.95, "description": null, "image_url": "images/beverages/hot-chocolate.png"},
-        {"name": "Iced Americano", "price": 3.95, "description": null, "image_url": "images/beverages/iced-americano.png"},
-        {"name": "Iced Vanilla Latte", "price": 5.95, "description": null, "image_url": "images/beverages/iced-vanilla-latte.png"},
-        {"name": "Iced Mocha", "price": 5.95, "description": null, "image_url": "images/beverages/iced-mocha.png"},
-        {"name": "Pop", "price": 3.95, "description": "Coke, Diet Coke, Ginger ale.", "image_url": "images/beverages/sparkling-water.png"},
-        {"name": "Juice", "price": 3.95, "description": "Apple, Orange.", "image_url": "images/beverages/juice.png"},
-        {"name": "Bottled Water", "price": 2.00, "description": null, "image_url": "images/beverages/bottled-water.png"},
-        {"name": "Sparkling Water", "price": 3.95, "description": null, "image_url": "images/beverages/sparkling-water.png"},
-        {"name": "Snapple Iced Tea", "price": 3.95, "description": "Peach, Lemon.", "image_url": "images/beverages/tea.png"},
-        {"name": "Chocolate Milk", "price": 4.50, "description": null, "image_url": "images/beverages/milk.png"},
-        {"name": "White Milk", "price": 4.50, "description": null, "image_url": "images/beverages/milk.png"},
-        {"name": "Flavoured Shots", "price": 0.85, "description": "Vanilla, Caramel, Hazelnut.", "image_url": "images/beverages/espresso.png"},
-        {"name": "Almond or Oat Milk", "price": 0.95, "description": null, "image_url": "images/beverages/almond-oat-milk.png"}
+        {"name": "Drip Coffee", "price": 3.50, "description": null, "image_url": "images/beverages_webp/drip-coffee.webp"},
+        {"name": "Espresso (single)", "price": 3.00, "description": null, "image_url": "images/beverages_webp/espresso.webp"},
+        {"name": "Espresso (double)", "price": 3.75, "description": null, "image_url": "images/beverages_webp/espresso.webp"},
+        {"name": "Americano", "price": 3.95, "description": null, "image_url": "images/beverages_webp/americano.webp"},
+        {"name": "Cappuccino", "price": 4.95, "description": null, "image_url": "images/beverages_webp/cappuccino.webp"},
+        {"name": "Flat White", "price": 5.95, "description": null, "image_url": "images/beverages_webp/flat-white.webp"},
+        {"name": "Latte", "price": 5.95, "description": null, "image_url": "images/beverages_webp/latte.webp"},
+        {"name": "Chai Tea Latte", "price": 5.95, "description": null, "image_url": "images/beverages_webp/chai-tea-latte.webp"},
+        {"name": "London Fog", "price": 5.95, "description": null, "image_url": "images/beverages_webp/london-fog.webp"},
+        {"name": "Tea", "price": 3.50, "description": "Orange Pekoe, Earl Grey, Jasmine Green, Spiced Chai, Raspberry.", "image_url": "images/beverages_webp/tea.webp"},
+        {"name": "Herbal Tea", "price": 3.95, "description": "Cranberry Apple, Cinnamon Apple, Chamomile, Lemon, Peppermint.", "image_url": "images/beverages_webp/tea.webp"},
+        {"name": "Mocha", "price": 5.95, "description": null, "image_url": "images/beverages_webp/mocha.webp"},
+        {"name": "Hot Chocolate", "price": 4.95, "description": null, "image_url": "images/beverages_webp/hot-chocolate.webp"},
+        {"name": "Iced Americano", "price": 3.95, "description": null, "image_url": "images/beverages_webp/iced-americano.webp"},
+        {"name": "Iced Vanilla Latte", "price": 5.95, "description": null, "image_url": "images/beverages_webp/iced-vanilla-latte.webp"},
+        {"name": "Iced Mocha", "price": 5.95, "description": null, "image_url": "images/beverages_webp/iced-mocha.webp"},
+        {"name": "Pop", "price": 3.95, "description": "Coke, Diet Coke, Ginger ale.", "image_url": "images/beverages_webp/sparkling-water.webp"},
+        {"name": "Juice", "price": 3.95, "description": "Apple, Orange.", "image_url": "images/beverages_webp/juice.webp"},
+        {"name": "Bottled Water", "price": 2.00, "description": null, "image_url": "images/beverages_webp/bottled-water.webp"},
+        {"name": "Sparkling Water", "price": 3.95, "description": null, "image_url": "images/beverages_webp/sparkling-water.webp"},
+        {"name": "Snapple Iced Tea", "price": 3.95, "description": "Peach, Lemon.", "image_url": "images/beverages_webp/tea.webp"},
+        {"name": "Chocolate Milk", "price": 4.50, "description": null, "image_url": "images/beverages_webp/milk.webp"},
+        {"name": "White Milk", "price": 4.50, "description": null, "image_url": "images/beverages_webp/milk.webp"},
+        {"name": "Flavoured Shots", "price": 0.85, "description": "Vanilla, Caramel, Hazelnut.", "image_url": "images/beverages_webp/espresso.webp"},
+        {"name": "Almond or Oat Milk", "price": 0.95, "description": null, "image_url": "images/beverages_webp/almond-oat-milk.webp"}
       ]
     },
     {
@@ -292,9 +292,9 @@
           "name": "Cupcakes",
           "category_url": "https://thetoastedwalnut.com/product-category/cupcakes/",
           "items": [
-            {"name": "Confetti Cupcakes", "price": 20.00, "pack_size": "1/2 dozen", "description": "Cupcakes are sold by the 1/2 dozen package. We require 48 hours notice.", "image_url": "https://thetoastedwalnut.com/wp-content/uploads/woocommerce-placeholder-600x600.png", "needs_photo": true, "product_url": "https://thetoastedwalnut.com/product/confetti/"},
-            {"name": "Seasonal Chocolate Cupcakes", "price": 20.00, "pack_size": "1/2 dozen", "description": "Cupcakes are sold by the 1/2 dozen package. We require 48 hours notice.", "image_url": "https://thetoastedwalnut.com/wp-content/uploads/woocommerce-placeholder-600x600.png", "needs_photo": true, "product_url": "https://thetoastedwalnut.com/product/seasonal-chocolate/"},
-            {"name": "Seasonal Vanilla Cupcakes", "price": 20.00, "pack_size": "1/2 dozen", "description": "Cupcakes are sold by the 1/2 dozen package. We require 48 hours notice.", "image_url": "https://thetoastedwalnut.com/wp-content/uploads/woocommerce-placeholder-600x600.png", "needs_photo": true, "product_url": "https://thetoastedwalnut.com/product/seasonal-vanilla/"}
+            {"name": "Confetti Cupcakes", "price": 20.00, "pack_size": "1/2 dozen", "description": "Cupcakes are sold by the 1/2 dozen package. We require 48 hours notice.", "image_url": "images/bakery_webp/confetti_cupcakes.webp", "needs_photo": false, "product_url": "https://thetoastedwalnut.com/product/confetti/"},
+            {"name": "Seasonal Chocolate Cupcakes", "price": 20.00, "pack_size": "1/2 dozen", "description": "Cupcakes are sold by the 1/2 dozen package. We require 48 hours notice.", "image_url": "images/bakery_webp/seasonal_chocolate_cupcakes.webp", "needs_photo": false, "product_url": "https://thetoastedwalnut.com/product/seasonal-chocolate/"},
+            {"name": "Seasonal Vanilla Cupcakes", "price": 20.00, "pack_size": "1/2 dozen", "description": "Cupcakes are sold by the 1/2 dozen package. We require 48 hours notice.", "image_url": "images/bakery_webp/seasonal_vanilla_cupcakes.webp", "needs_photo": false, "product_url": "https://thetoastedwalnut.com/product/seasonal-vanilla/"}
           ]
         },
         {
@@ -303,7 +303,7 @@
           "category_url": "https://thetoastedwalnut.com/product-category/pastry/",
           "items": [
             {"name": "Croissant", "price": 3.50, "pack_size": "single", "description": "Delicious butter croissant made fresh every morning.", "image_url": "https://thetoastedwalnut.com/wp-content/uploads/2022/03/original-1-600x600.jpeg", "needs_photo": false, "product_url": "https://thetoastedwalnut.com/product/croissant/"},
-            {"name": "Savory Danish", "price": 5.95, "pack_size": "single", "description": "Scrumptious pastry topped with fresh ingredients and sprinkled with mozzarella and cheddar cheese.", "image_url": "https://thetoastedwalnut.com/wp-content/uploads/woocommerce-placeholder-600x600.png", "needs_photo": true, "product_url": "https://thetoastedwalnut.com/product/savory-danish/"}
+            {"name": "Savory Danish", "price": 5.95, "pack_size": "single", "description": "Scrumptious pastry topped with fresh ingredients and sprinkled with mozzarella and cheddar cheese.", "image_url": "images/bakery_webp/savory_danish.webp", "needs_photo": false, "product_url": "https://thetoastedwalnut.com/product/savory-danish/"}
           ]
         },
         {
@@ -314,8 +314,8 @@
             {"name": "Apple Crumble Pie", "price": 18.00, "pack_size": "whole pie", "description": "Spiced local apples topped with our signature oat crumble.", "image_url": "https://thetoastedwalnut.com/wp-content/uploads/2021/04/ToastedWalnut_224-600x400.jpg", "needs_photo": false, "product_url": "https://thetoastedwalnut.com/product/apple-crumble/"},
             {"name": "Apple Pie", "price": 18.00, "pack_size": "whole pie", "description": "Spiced local apples wrapped in our homemade pastry. Just like grandma used to make.", "image_url": "https://thetoastedwalnut.com/wp-content/uploads/2021/04/ToastedWalnut_224-600x400.jpg", "needs_photo": false, "product_url": "https://thetoastedwalnut.com/product/apple/"},
             {"name": "Blueberry Pie", "price": 18.00, "pack_size": "whole pie", "description": "Wild blueberries sweetened with sugar and lemon, wrapped in our homemade pastry.", "image_url": "https://thetoastedwalnut.com/wp-content/uploads/2022/11/original-4-600x394.jpeg", "needs_photo": false, "product_url": "https://thetoastedwalnut.com/product/blueberry-pie/"},
-            {"name": "Cherry Pie", "price": 18.00, "pack_size": "whole pie", "description": "Cherry pie filling wrapped in our homemade pastry.", "image_url": "https://thetoastedwalnut.com/wp-content/uploads/woocommerce-placeholder-600x600.png", "needs_photo": true, "product_url": "https://thetoastedwalnut.com/product/cherry-pie-2/"},
-            {"name": "Father Christmas Pie", "price": 30.00, "pack_size": "whole pie, seasonal", "description": "An Oreo cookie crust layered with chocolate ganache topped with a whipped peppermint cheesecake filling.", "image_url": "https://thetoastedwalnut.com/wp-content/uploads/woocommerce-placeholder-600x600.png", "needs_photo": true, "product_url": "https://thetoastedwalnut.com/product/father-christmas-pie/"},
+            {"name": "Cherry Pie", "price": 18.00, "pack_size": "whole pie", "description": "Cherry pie filling wrapped in our homemade pastry.", "image_url": "images/bakery_webp/cherry_pie.webp", "needs_photo": false, "product_url": "https://thetoastedwalnut.com/product/cherry-pie-2/"},
+            {"name": "Father Christmas Pie", "price": 30.00, "pack_size": "whole pie, seasonal", "description": "An Oreo cookie crust layered with chocolate ganache topped with a whipped peppermint cheesecake filling.", "image_url": "images/bakery_webp/father_christmas_pie.webp", "needs_photo": false, "product_url": "https://thetoastedwalnut.com/product/father-christmas-pie/"},
             {"name": "Pecan Pie", "price": 20.00, "pack_size": "whole pie", "description": null, "image_url": "https://thetoastedwalnut.com/wp-content/uploads/2021/04/ToastedWalnut_224-600x400.jpg", "needs_photo": false, "product_url": "https://thetoastedwalnut.com/product/pecan-pie/"},
             {"name": "Raspberry Pie", "price": 18.00, "pack_size": "whole pie", "description": "Sweetened raspberries with lemon wrapped in our homemade pastry or crumble topping.", "image_url": "https://thetoastedwalnut.com/wp-content/uploads/2022/11/original-7-600x600.jpeg", "needs_photo": false, "product_url": "https://thetoastedwalnut.com/product/raspberry-pie/"},
             {"name": "Strawberry Rhubarb Pie", "price": 18.00, "pack_size": "whole pie", "description": "House made strawberry and rhubarb filling wrapped in our melt in your mouth pastry.", "image_url": "https://thetoastedwalnut.com/wp-content/uploads/2021/04/ToastedWalnut_224-600x400.jpg", "needs_photo": false, "product_url": "https://thetoastedwalnut.com/product/strawberry-rhubarb-pie/"}
@@ -326,8 +326,8 @@
           "name": "Quiche",
           "category_url": "https://thetoastedwalnut.com/product-category/full-quiche/",
           "items": [
-            {"name": "Crustless Quiche", "price": 25.00, "pack_size": "whole, serves 6, gluten free", "description": "Breakfast, Brunch, Lunch, Dinner? One of the most versatile meals. We make them fresh daily. Our Crustless Quiche is Gluten Free. Serves 6", "image_url": "https://thetoastedwalnut.com/wp-content/uploads/woocommerce-placeholder-600x600.png", "needs_photo": true, "product_url": "https://thetoastedwalnut.com/product/quiche/"},
-            {"name": "Crustless Spinach and Cheddar Quiche", "price": 25.00, "pack_size": "whole", "description": null, "image_url": "https://thetoastedwalnut.com/wp-content/uploads/2024/09/original-600x600.jpeg", "needs_photo": false, "product_url": "https://thetoastedwalnut.com/product/crustless-spinach-cheddar/"},
+            {"name": "Crustless Quiche", "price": 25.00, "pack_size": "whole, serves 6, gluten free", "description": "Breakfast, Brunch, Lunch, Dinner? One of the most versatile meals. We make them fresh daily. Our Crustless Quiche is Gluten Free. Serves 6", "image_url": "images/bakery_webp/crustless_quiche.webp", "needs_photo": false, "product_url": "https://thetoastedwalnut.com/product/quiche/"},
+            {"name": "Crustless Spinach and Cheddar Quiche", "price": 25.00, "pack_size": "whole", "description": null, "image_url": "images/bakery_webp/crustless_spinach_and_cheddar.webp", "needs_photo": false, "product_url": "https://thetoastedwalnut.com/product/crustless-spinach-cheddar/"},
             {"name": "Quiche With Crust", "price": 25.00, "pack_size": "whole", "description": "Breakfast, Brunch, Lunch, Dinner? One of the most versatile meals. We make them fresh daily.", "image_url": "https://thetoastedwalnut.com/wp-content/uploads/2021/04/38091959-441F-4D90-9995-90A01757F027-600x800.jpeg", "needs_photo": false, "product_url": "https://thetoastedwalnut.com/product/crustless-quiche-2/"}
           ]
         },

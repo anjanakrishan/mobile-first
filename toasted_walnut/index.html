@@ -49,23 +49,73 @@
     border-bottom: 1px solid var(--navy-light);
   }
 
-  /* Dropdown Select on Right */
-  .breadcrumb-select {
-    background: rgba(255, 255, 255, 0.12);
+  /* Top Nav Menu on Right */
+  .top-nav-menu {
+    position: relative;
+  }
+  .top-nav-toggle {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: rgba(255, 255, 255, 0.1);
     color: #FFFFFF;
     font-family: 'Plus Jakarta Sans', sans-serif;
-    font-size: 11.5px;
+    font-size: 13px;
     font-weight: 600;
-    padding: 5px 10px;
-    border-radius: 6px;
-    border: 1px solid rgba(255, 255, 255, 0.2);
+    padding: 8px 14px;
+    border-radius: 8px;
+    border: 1px solid rgba(255, 255, 255, 0.18);
     outline: none;
     cursor: pointer;
+    transition: background 0.15s ease, border-color 0.15s ease;
   }
-
-  .breadcrumb-select option {
+  .top-nav-toggle:hover,
+  .top-nav-toggle[aria-expanded="true"] {
+    background: rgba(255, 255, 255, 0.18);
+    border-color: rgba(255, 255, 255, 0.32);
+  }
+  .top-nav-toggle .chevron-icon {
+    transition: transform 0.15s ease;
+  }
+  .top-nav-toggle[aria-expanded="true"] .chevron-icon {
+    transform: rotate(180deg);
+  }
+  .top-nav-dropdown {
+    position: absolute;
+    top: calc(100% + 6px);
+    right: 0;
+    z-index: 95;
+    min-width: 160px;
+    padding: 6px;
+    border: 1px solid var(--line);
+    border-radius: 10px;
+    background: #FFFFFF;
+    box-shadow: 0 12px 28px rgba(15, 23, 42, 0.2);
+  }
+  .top-nav-dropdown[hidden] { display: none; }
+  .top-nav-option {
+    display: block;
+    width: 100%;
+    text-align: left;
+    padding: 9px 10px;
+    border: none;
+    border-radius: 6px;
+    background: transparent;
+    color: var(--ink);
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-size: 13.5px;
+    font-weight: 500;
+    text-decoration: none;
+    cursor: pointer;
+    box-sizing: border-box;
+  }
+  .top-nav-option:hover {
+    background: var(--paper);
+  }
+  .top-nav-option.active {
     background: var(--navy);
     color: #FFFFFF;
+    font-weight: 600;
   }
 
   /* --- BRAND HEADER BANNER --- */
@@ -413,14 +463,20 @@
 <div class="app-container">
 
   <div class="top-header-bar">
-    <select class="breadcrumb-select" onchange="if (this.value) window.location.href=this.value;">
-      <option value="https://thetoastedwalnut.com/">Home</option>
-      <option value="https://thetoastedwalnut.com/about/">About</option>
-      <option value="" selected>Menu</option>
-      <option value="https://thetoastedwalnut.com/catering/">Catering</option>
-      <option value="https://thetoastedwalnut.com/shop/">Shop</option>
-      <option value="https://thetoastedwalnut.com/contact/">Contact</option>
-    </select>
+    <div class="top-nav-menu">
+      <button class="top-nav-toggle" type="button" aria-expanded="false" aria-controls="topNavDropdown" onclick="toggleTopNavMenu()">
+        Menu
+        <svg class="chevron-icon" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
+      </button>
+      <div class="top-nav-dropdown" id="topNavDropdown" hidden>
+        <a class="top-nav-option" href="https://thetoastedwalnut.com/" target="_blank" rel="noopener noreferrer">Home</a>
+        <a class="top-nav-option" href="https://thetoastedwalnut.com/about/" target="_blank" rel="noopener noreferrer">About</a>
+        <a class="top-nav-option active" href="#">Menu</a>
+        <a class="top-nav-option" href="https://thetoastedwalnut.com/catering/" target="_blank" rel="noopener noreferrer">Catering</a>
+        <a class="top-nav-option" href="https://thetoastedwalnut.com/shop/" target="_blank" rel="noopener noreferrer">Shop</a>
+        <a class="top-nav-option" href="https://thetoastedwalnut.com/contact/" target="_blank" rel="noopener noreferrer">Contact</a>
+      </div>
+    </div>
   </div>
 
   <header class="brand-header">
@@ -483,35 +539,35 @@
   let activeLunchMode = 'lunch_dine_in';
   let activeLunchSubcategoryId = 'all';
   const lunchImageByItem = {
-    'Club House Stack': 'images/lunch/club-house-stack.png',
-    'Roasted Red Pepper': 'images/lunch/roasted-red-pepper-panini.png',
-    'Cranberry and Chicken': 'images/lunch/cranberry-chicken-panini.png',
-    'Gourmet Grilled Cheese': 'images/lunch/gourmet-grilled-cheese.png',
-    'Fig and Apple': 'images/lunch/fig-and-apple-panini.png',
-    'Chicken Salad': 'images/lunch/chicken-salad-sandwich.png',
-    'Cucumber and Cream Cheese': 'images/lunch/cucumber-cream-cheese-sandwich.png',
-    'Egg Salad': 'images/lunch/egg-salad-sandwich.png',
-    'Ham and Cheese': 'images/lunch/ham-and-cheese-sandwich.png',
-    'Loaded Tuna': 'images/lunch/loaded-tuna-sandwich.png',
-    'BLT': 'images/lunch/blt-sandwich.png',
-    'Chicken Caesar': 'images/lunch/chicken-caesar-wrap.png',
-    'Chipotle Chicken': 'images/lunch/chipotle-chicken-wrap.png',
-    'Cranberry Chicken Salad': 'images/lunch/cranberry-chicken-salad-wrap.png',
-    'Maple Chicken': 'images/lunch/maple-chicken-wrap.png',
-    'Veggie Lovers (vegetarian)': 'images/lunch/veggie-lovers-wrap.png',
-    'Veggie Lovers Wrap (vegetarian)': 'images/lunch/veggie-lovers-wrap.png',
-    'Mango Curry Butternut Squash': 'images/lunch/mango-curry-butternut-squash-soup.png',
-    'Soup of the Day': 'images/lunch/soup-of-the-day.png',
-    'Soup and 1/2 Sandwich': 'images/lunch/soup-half-sandwich.png',
-    'Soup, Salad, Scone': 'images/lunch/soup-salad-scone.png',
-    'Crustless Quiche, Salad and Scone': 'images/lunch/quiche-salad-scone.png',
-    'Crustless Quiche, Soup and Scone': 'images/lunch/quiche-soup-scone.png',
-    'Afternoon Tea for Two': 'images/lunch/afternoon-tea.png',
-    'Afternoon Tea Box for Two': 'images/lunch/afternoon-tea-box.png',
-    'Beet and Goat Cheese': 'images/lunch/beet-goat-cheese-salad.png',
-    'Grilled Chicken Caesar': 'images/lunch/grilled-chicken-caesar-salad.png',
-    'Garden': 'images/lunch/garden-salad.png',
-    'The Toasted Walnut Signature': 'images/lunch/toasted-walnut-signature-salad.png'
+    'Club House Stack': 'images/lunch_webp/club-house-stack.webp',
+    'Roasted Red Pepper': 'images/lunch_webp/roasted-red-pepper-panini.webp',
+    'Cranberry and Chicken': 'images/lunch_webp/cranberry-chicken-panini.webp',
+    'Gourmet Grilled Cheese': 'images/lunch_webp/gourmet-grilled-cheese.webp',
+    'Fig and Apple': 'images/lunch_webp/fig-and-apple-panini.webp',
+    'Chicken Salad': 'images/lunch_webp/chicken-salad-sandwich.webp',
+    'Cucumber and Cream Cheese': 'images/lunch_webp/cucumber-cream-cheese-sandwich.webp',
+    'Egg Salad': 'images/lunch_webp/egg-salad-sandwich.webp',
+    'Ham and Cheese': 'images/lunch_webp/ham-and-cheese-sandwich.webp',
+    'Loaded Tuna': 'images/lunch_webp/loaded-tuna-sandwich.webp',
+    'BLT': 'images/lunch_webp/blt-sandwich.webp',
+    'Chicken Caesar': 'images/lunch_webp/chicken-caesar-wrap.webp',
+    'Chipotle Chicken': 'images/lunch_webp/chipotle-chicken-wrap.webp',
+    'Cranberry Chicken Salad': 'images/lunch_webp/cranberry-chicken-salad-wrap.webp',
+    'Maple Chicken': 'images/lunch_webp/maple-chicken-wrap.webp',
+    'Veggie Lovers (vegetarian)': 'images/lunch_webp/veggie-lovers-wrap.webp',
+    'Veggie Lovers Wrap (vegetarian)': 'images/lunch_webp/veggie-lovers-wrap.webp',
+    'Mango Curry Butternut Squash': 'images/lunch_webp/mango-curry-butternut-squash-soup.webp',
+    'Soup of the Day': 'images/lunch_webp/soup-of-the-day.webp',
+    'Soup and 1/2 Sandwich': 'images/lunch_webp/soup-half-sandwich.webp',
+    'Soup, Salad, Scone': 'images/lunch_webp/soup-salad-scone.webp',
+    'Crustless Quiche, Salad and Scone': 'images/lunch_webp/quiche-salad-scone.webp',
+    'Crustless Quiche, Soup and Scone': 'images/lunch_webp/quiche-soup-scone.webp',
+    'Afternoon Tea for Two': 'images/lunch_webp/afternoon-tea.webp',
+    'Afternoon Tea Box for Two': 'images/lunch_webp/afternoon-tea-box.webp',
+    'Beet and Goat Cheese': 'images/lunch_webp/beet-goat-cheese-salad.webp',
+    'Grilled Chicken Caesar': 'images/lunch_webp/grilled-chicken-caesar-salad.webp',
+    'Garden': 'images/lunch_webp/garden-salad.webp',
+    'The Toasted Walnut Signature': 'images/lunch_webp/toasted-walnut-signature-salad.webp'
   };
 
   async function initApp() {
@@ -564,6 +620,21 @@
     menu.hidden = !menu.hidden;
     toggle.setAttribute('aria-expanded', String(!menu.hidden));
   }
+
+  function toggleTopNavMenu() {
+    const menu = document.getElementById('topNavDropdown');
+    const toggle = document.querySelector('.top-nav-toggle');
+    menu.hidden = !menu.hidden;
+    toggle.setAttribute('aria-expanded', String(!menu.hidden));
+  }
+
+  document.addEventListener('click', (e) => {
+    const nav = document.querySelector('.top-nav-menu');
+    if (nav && !nav.contains(e.target)) {
+      document.getElementById('topNavDropdown').hidden = true;
+      document.querySelector('.top-nav-toggle').setAttribute('aria-expanded', 'false');
+    }
+  });
 
   function selectCategory(catId, btn) {
     document.querySelectorAll('.cat-btn, .category-option').forEach(b => b.classList.remove('active'));
