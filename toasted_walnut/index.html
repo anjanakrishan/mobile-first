@@ -716,10 +716,11 @@
   function renderMenu() {
     const container = document.getElementById('menuContainer');
     const searchVal = document.getElementById('searchInput').value.toLowerCase();
+    const isSearching = searchVal.length > 0;
     let html = '';
 
     database.categories.forEach(cat => {
-      if (currentCategoryId !== 'all') {
+      if (!isSearching && currentCategoryId !== 'all') {
         if (currentCategoryId === 'lunch_dine_in' && cat.id !== activeLunchMode) return;
         if (currentCategoryId !== 'lunch_dine_in' && cat.id !== currentCategoryId) return;
       }
@@ -755,7 +756,7 @@
 
       if (cat.subcategories) {
         cat.subcategories.forEach(sub => {
-          if (activeLunchSubcategoryId !== 'all' && sub.id !== activeLunchSubcategoryId) return;
+          if (!isSearching && activeLunchSubcategoryId !== 'all' && sub.id !== activeLunchSubcategoryId) return;
           const items = searchVal
             ? sub.items.filter(item =>
                 item.name.toLowerCase().includes(searchVal) ||
