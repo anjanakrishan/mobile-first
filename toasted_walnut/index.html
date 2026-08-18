@@ -173,7 +173,7 @@
     background: var(--paper); border: 1px solid var(--line);
     padding: 8px 12px; border-radius: 8px;
   }
-  .search-box input { border: none; background: transparent; outline: none; width: 100%; font-size: 13.5px; color: var(--ink); }
+  .search-box input { border: none; background: transparent; outline: none; width: 100%; font-size: 16px; color: var(--ink); }
 
   .category-nav {
     position: relative;
@@ -726,10 +726,7 @@
       }
 
       const isLunchMenu = cat.id === 'lunch_dine_in' || cat.id === 'lunch_take_out';
-      if (!isLunchMenu) {
-        html += `<div class="section-title">${cat.name}</div>`;
-        if (cat.subtitle) html += `<div class="section-subtitle">${cat.subtitle}</div>`;
-      }
+      let categoryHtml = '';
 
       const renderItems = (items, categoryPrice) => {
         items.forEach(item => {
@@ -737,7 +734,7 @@
           const priceDisplay = price ? `$${price.toFixed(2)}` : (item.price_range ? `$${item.price_range[0].toFixed(2)} - $${item.price_range[1].toFixed(2)}` : '');
           const image = lunchImageByItem[item.name] || ((item.image_url && !item.needs_photo) ? item.image_url : getFallbackImage(cat.id));
 
-          html += `
+          categoryHtml += `
             <div class="menu-item-card">
               <img src="${image}" alt="${item.name}">
               <div class="item-details">
@@ -765,7 +762,7 @@
             : sub.items;
           if (items.length === 0) return;
 
-          html += `
+          categoryHtml += `
             <section class="menu-subsection" id="lunch-section-${sub.id}">
               <div class="menu-subsection-header">
                 <h3 class="menu-subsection-title">${sub.name}</h3>
@@ -773,7 +770,7 @@
               ${sub.note ? `<p class="menu-subsection-note">${sub.note}</p>` : ''}
           `;
           renderItems(items, sub.price);
-          html += '</section>';
+          categoryHtml += '</section>';
         });
       } else {
         const items = searchVal
@@ -785,6 +782,14 @@
         if (items.length === 0) return;
         renderItems(items, cat.price);
       }
+
+      if (!categoryHtml) return;
+
+      if (!isLunchMenu) {
+        html += `<div class="section-title">${cat.name}</div>`;
+        if (cat.subtitle) html += `<div class="section-subtitle">${cat.subtitle}</div>`;
+      }
+      html += categoryHtml;
     });
 
     container.innerHTML = html || `<p style="text-align:center; padding:30px; color:var(--ink-muted);">No menu items found.</p>`;
